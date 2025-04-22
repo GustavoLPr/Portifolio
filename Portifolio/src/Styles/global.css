@@ -1,0 +1,26 @@
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "JetBrains Mono", monospace;
+}
+
+:root {
+  --bg-color: #222831;
+  --text-color: #FFF6F6;
+  --accent-color: #6b8e23;
+}
+
+.light-theme {
+  --bg-color: #E3E6E6;
+  --text-color: #030000;
+  --accent-color: #a1c55a;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* transition: all 0.3s ease; */
+}
