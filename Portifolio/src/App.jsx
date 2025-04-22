@@ -4,6 +4,7 @@ import './styles/global.css'
 import Home from './Pages/Home'
 import 'typeface-jetbrains-mono';
 import { ThemeProvider } from './context/themeContext';
+import ParticlesBackground from './Components/Particles/ParticlesBackground';
 // import { ThemeProvider } from './context/themeContext';
 
 
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <ParticlesBackground/>
     <Home/>
     </ThemeProvider>
   )
