@@ -1,0 +1,40 @@
+.containerCardFormacao {
+  background-color: var(--cardBg-color);
+  width: 669px;
+  height: auto;
+  border-radius: 11px;
+  box-shadow: 0px 8px var(--accent-color);
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 23px;
+  padding-bottom: 6px;
+  color: var(--accent-color);
+}
+
+.instituicao {
+  font-size: 15px;
+  padding-bottom: 20px;
+  color: var(--cardText-color);
+}
+
+.descricao {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 15px;
+  color: var(--cardText-color);
+  margin-top: 8px;
+}
+
+.status {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  font-size: 10px;
+  color: var(--accent-color);
+}
