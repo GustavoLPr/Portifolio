@@ -1,9 +1,121 @@
 .container {
-    width: 100%; 
-    height: 100vh;
-    background-color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
 }
 
-.botao{
-    position: relative;
+.inicio {
+  width: 100%;
+  height: 1000vh;
+  margin-top: 83px;
+  display: flex;
+}
+
+.esquerdaInicio {
+  width: 50%;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.textEsquerdaInicio {
+  height: 50vh;
+  margin-left: 300px;
+  margin-top: 130px;
+}
+
+.linha1,
+.linha3 {
+  font-size: 30px;
+}
+
+.linha1 {
+  margin-left: 110px;
+}
+
+.nome {
+  color: var(--accent-color);
+}
+
+.linha2 {
+  font-size: 50px;
+}
+
+.linha3 {
+  margin-left: 65px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 4px;
+  background-color: var(--accent-color);
+  max-width: 200px;
+}
+
+.linkText {
+  color: var(
+    --text-color
+  ); /* ou qualquer cor de texto que você esteja usando */
+  white-space: nowrap;
+}
+
+.link {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  font-size: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.link:hover {
+  color: var(--accent-color);
+}
+
+.direitaInicio {
+  width: 50%;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fotoDireitaInicio {
+  width: 400px;
+  /* position: relative; */
+  margin-bottom: 200px;
+  border-radius: 250px;
+  border: 2px solid var(--accent-color);
+  position: relative;
+  z-index: 1;
+}
+
+.scrollEsquerdaInicio {
+    display: flex;
+    flex-direction: column; /* empilha os elementos na vertical */
+    align-items: center;
+    margin-left: 300px;
+
+  }
+  
+  .scrollLine {
+    width: 4px; /* fininha, como linha */
+    height: 150px; /* altura da linha */
+    background-color: var(--accent-color); /* mesma cor usada nas outras linhas */
+  }
+  
+.scroll{
+    margin-bottom: 10px;
+    font-size: 30px;
 }

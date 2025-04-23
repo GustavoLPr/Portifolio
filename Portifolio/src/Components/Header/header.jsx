@@ -38,7 +38,7 @@ export default function Header() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.headerContainer}>
       <div className={styles.left}>
         <div className={styles.nameAreaLeft}>
           <div className={styles.logo}>
