@@ -1,0 +1,78 @@
+.containerCardProjetos {
+  width: 398.62px;
+  height: 640.55px;
+  background-color: var(--cardBg-color);
+  border-radius: 38.4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.containerCardProjetos:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--accent-color);
+}
+
+.image {
+    width: calc(100% - 10px); /* largura total - padding/margem lateral (15px de cada lado) */
+    height: 251.15px;
+    border-radius: 38.4px;
+    background-color: aliceblue;
+    margin: 10px auto 0 auto; /* centraliza e dá espaço no topo */
+    object-fit: cover;
+  }
+  
+
+.title {
+  font-size: 23.04px;
+  color: var(--text-color);
+  padding: 15px;
+}
+
+.descricao {
+  font-size: 15.36px;
+  color: var(--text-color);
+  padding: 15px;
+  text-align: left;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  margin-top: auto; /* Empurra as tags para baixo, ficando mais próximas do linkGit */
+
+}
+
+.tag {
+  width: 71.91px;
+  height: 29.15px;
+  background-color: var(--accent-color);
+  border-radius: 194.36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--text-color);
+}
+
+.linkGit {
+  background-color: transparent;
+  border: none;
+  width: 60.6px;
+  font-size: 60.6px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  margin-top: auto; /* Faz o linkGit "colar" no final do card */
+}
+
+.linkGit:hover {
+  color: var(--accent-color);
+}

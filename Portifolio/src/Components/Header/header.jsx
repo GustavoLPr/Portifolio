@@ -4,13 +4,13 @@ import Logo from "../../assets/logoPretoCortado.png";
 import LogoClara from "../../assets/logoBrancoCortado.png";
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
-import {GiBrazilFlag} from "react-icons/gi"
-import {LiaFlagUsaSolid} from "react-icons/lia"
+import { GiBrazilFlag } from "react-icons/gi";
+import { LiaFlagUsaSolid } from "react-icons/lia";
 import { useTheme } from "../../context/themeContext";
 
 export default function Header() {
   // const [darkMode, setDarkMode] = useState("darkMode");
-  const {darkMode, toggleTheme} = useTheme();
+  const { darkMode, toggleTheme } = useTheme();
   const [languageMode, setLanguageMode] = useState("BR");
 
   // const mudarParaLightMode = () => {
@@ -44,24 +44,22 @@ export default function Header() {
           <div className={styles.logo}>
             {darkMode ? (
               <img
-              src={Logo}
-              alt="Gustavo Leal, Dev FullStack"
-              className={styles.logo}
-            />
+                src={Logo}
+                alt="Gustavo Leal, Dev FullStack"
+                className={styles.logo}
+              />
             ) : (
               <img
-              src={LogoClara}
-              alt="Gustavo Leal, Dev FullStack"
-              className={styles.logo}
-            />
+                src={LogoClara}
+                alt="Gustavo Leal, Dev FullStack"
+                className={styles.logo}
+              />
             )}
           </div>
         </div>
         <button
           onClick={toggleTheme}
-          className={
-            darkMode ? styles.darkModeLeft : styles.ligthModeLeft
-          }
+          className={darkMode ? styles.darkModeLeft : styles.ligthModeLeft}
         >
           {darkMode ? (
             <MdDarkMode className={styles.moonIcon} />
@@ -69,30 +67,30 @@ export default function Header() {
             <MdLightMode className={styles.sunIcon} />
           )}
         </button>
-            <div className={styles.languageChoice}>
-              <button
-                // className={styles.contratante}
-                onClick={mudarParaBR}
-                className={
-                  languageMode === "BR"
-                    ? styles.selecionadoBR
-                    : styles.naoSelecionadoBR
-                }
-              >
-                <GiBrazilFlag className={styles.br}/>
-              </button>
-              <button
-                // className={styles.anunciante}
-                onClick={mudarParaUS}
-                className={
-                  languageMode === "US"
-                    ? styles.selecionadoUS
-                    : styles.naoSelecionadoUS
-                }
-              >
-                <LiaFlagUsaSolid className={styles.us}/> 
-              </button>
-            </div>
+        <div className={styles.languageChoice}>
+          <button
+            // className={styles.contratante}
+            onClick={mudarParaBR}
+            className={
+              languageMode === "BR"
+                ? styles.selecionadoBR
+                : styles.naoSelecionadoBR
+            }
+          >
+            <GiBrazilFlag className={styles.br} />
+          </button>
+          <button
+            // className={styles.anunciante}
+            onClick={mudarParaUS}
+            className={
+              languageMode === "US"
+                ? styles.selecionadoUS
+                : styles.naoSelecionadoUS
+            }
+          >
+            <LiaFlagUsaSolid className={styles.us} />
+          </button>
+        </div>
 
         {/* <button
           onClick={languageMode === "BR" ? mudarParaUS : mudarParaBR}
@@ -109,11 +107,81 @@ export default function Header() {
       </div>
       <div className={styles.right}>
         <div className={styles.rotasRight}>
-          <button className={styles.botaoInicio}>Inicio</button>
-          <button className={styles.botaoSobre}>Sobre</button>
-          <button className={styles.botaoTecnologias}>Tecnologias</button>
-          <button className={styles.botaoProjetos}>Projetos</button>
-          <button className={styles.botaoContato}>Contato</button>
+          <button
+            className={styles.botaoInicio}
+            onClick={() => {
+              const el = document.getElementById("inicio");
+              if (el) {
+                const offsetTop = el.offsetTop;
+                window.scrollTo({
+                  top: offsetTop - 100, // muda esse valor como quiser
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
+            Inicio
+          </button>
+          <button
+            className={styles.botaoSobre}
+            onClick={() => {
+              const el = document.getElementById("sobre");
+              if (el) {
+                const offsetTop = el.offsetTop;
+                window.scrollTo({
+                  top: offsetTop - 100, // muda esse valor como quiser
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
+            Sobre
+          </button>
+          <button
+            className={styles.botaoTecnologias}
+            onClick={() => {
+              const el = document.getElementById("tecnologias");
+              if (el) {
+                const offsetTop = el.offsetTop;
+                window.scrollTo({
+                  top: offsetTop - 100, // muda esse valor como quiser
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
+            Tecnologias
+          </button>
+          <button
+            className={styles.botaoProjetos}
+            onClick={() => {
+              const el = document.getElementById("projetos");
+              if (el) {
+                const offsetTop = el.offsetTop;
+                window.scrollTo({
+                  top: offsetTop - 100, // muda esse valor como quiser
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
+            Projetos
+          </button>
+          <button
+            className={styles.botaoContato}
+            onClick={() => {
+              const el = document.getElementById("contato");
+              if (el) {
+                const offsetTop = el.offsetTop;
+                window.scrollTo({
+                  top: offsetTop - 100, // muda esse valor como quiser
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
+            Contato
+          </button>
           <button className={styles.botaoBaixar}>Baixar CV</button>
         </div>
       </div>

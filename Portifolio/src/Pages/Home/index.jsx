@@ -1,37 +1,39 @@
 import React from "react";
 import Header from "../../Components/Header/header";
+import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
 import Foto from "../../assets/foto.png";
 import { PiHandWaving } from "react-icons/pi";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
-import {AiOutlineJava} from "react-icons/ai";
-import {BiLogoReact} from "react-icons/bi";
-import {BiLogoCss3} from "react-icons/bi";
-import {BiLogoJavascript} from "react-icons/bi";
-import {TbBrandReactNative} from "react-icons/tb";
-import {BiLogoTypescript} from "react-icons/bi";
-import {AiFillHtml5} from "react-icons/ai";
-import {AiOutlinePython} from "react-icons/ai";
-import {BiLogoPostgresql} from "react-icons/bi";
-import {DiMysql} from "react-icons/di";
-import {BiLogoPhp} from "react-icons/bi";
-import {BiLogoSpringBoot} from "react-icons/bi";
-import {SiDbeaver} from "react-icons/si";
-import {BiLogoVisualStudio} from "react-icons/bi";
-import {DiEclipse} from "react-icons/di";
-import {BiLogoFigma} from "react-icons/bi";
-import {SiPostman} from "react-icons/si";
-import {BiLogoNodejs} from "react-icons/bi"
+import { AiOutlineJava } from "react-icons/ai";
+import { BiLogoReact } from "react-icons/bi";
+import { BiLogoCss3 } from "react-icons/bi";
+import { BiLogoJavascript } from "react-icons/bi";
+import { TbBrandReactNative } from "react-icons/tb";
+import { BiLogoTypescript } from "react-icons/bi";
+import { AiFillHtml5 } from "react-icons/ai";
+import { AiOutlinePython } from "react-icons/ai";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { DiMysql } from "react-icons/di";
+import { BiLogoPhp } from "react-icons/bi";
+import { BiLogoSpringBoot } from "react-icons/bi";
+import { SiDbeaver } from "react-icons/si";
+import { BiLogoVisualStudio } from "react-icons/bi";
+import { DiEclipse } from "react-icons/di";
+import { BiLogoFigma } from "react-icons/bi";
+import { SiPostman } from "react-icons/si";
+import { BiLogoNodejs } from "react-icons/bi";
 import CardFormacao from "../../Components/cardFormacao/cardFormacao";
 import CardTecnologias from "../../Components/cardTecnologias/cardTecnologias";
+import CardProjetos from "../../Components/cardProjetos/cardProjetos";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Header />
-      <div className={styles.inicio}>
+      <div className={styles.inicio} id="inicio">
         <div className={styles.esquerdaInicio}>
           <div className={styles.textEsquerdaInicio}>
             <span className={styles.linha1}>
@@ -47,13 +49,13 @@ export default function Home() {
             <div className={styles.links}>
               <div className={styles.line}></div>
               <span className={styles.linkText}>
-                <button className={styles.link}>
+                <button className={styles.link} onClick={() => window.open("https://github.com/GustavoLPr", "_blank")}>
                   <AiFillGithub />
                 </button>
-                <button className={styles.link}>
+                <button className={styles.link} onClick={() => window.open("https://www.linkedin.com/in/gustavo-leal-256867297/", "_blank")}>
                   <AiFillLinkedin />
                 </button>
-                <button className={styles.link}>
+                <button className={styles.link} onClick={() => window.open("mailto:gustavolealprado.silva@gmail.com", "_blank")}>
                   <AiOutlineMail />{" "}
                 </button>
               </span>
@@ -73,11 +75,11 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className={styles.sobre}>
-        <div className={styles.sobreTitulo}>
-          <div className={styles.linhaSobre}></div>
-          <div className={styles.sobreTituloText}>Sobre</div>
-          <div className={styles.linhaSobre}></div>
+      <div className={styles.sobre} id="sobre">
+        <div className={styles.separacao}>
+          <div className={styles.linha}></div>
+          <div className={styles.titulo}>Sobre</div>
+          <div className={styles.linha}></div>
         </div>
         <div className={styles.contentSobre}>
           <div className={styles.esquerdaSobre}>
@@ -122,58 +124,101 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
           </div>
         </div>
       </div>
-      <div className={styles.tecnologias}>
-        <div className={styles.tecnologiasTitulo}>
-          <div className={styles.linhaTecnologias}></div>
-          <div className={styles.tecnologiasTituloText}>Tecnologias</div>
-          <div className={styles.linhaTecnologias}></div>
+      <div className={styles.tecnologias} id="tecnologias">
+        <div className={styles.separacao}>
+          <div className={styles.linha}></div>
+          <div className={styles.titulo}>Tecnologias</div>
+          <div className={styles.linha}></div>
         </div>
         <div className={styles.tecnologiasContent}>
-  <div className={styles.tecnologiasCategorias}>
-    <div className={styles.categoriaBloco}>
-      <div className={styles.titleTecnologias}>FrontEnd</div>
-      <div className={styles.cardsLinha}>
-        <CardTecnologias icon={BiLogoReact} title="React" />
-        <CardTecnologias icon={TbBrandReactNative} title="React Native" />
-        <CardTecnologias icon={BiLogoJavascript} title="JavaScript" />
-        <CardTecnologias icon={BiLogoTypescript} title="TypeScript" />
-        <CardTecnologias icon={AiFillHtml5} title="HTML" />
-        <CardTecnologias icon={BiLogoCss3} title="CSS" />
+          <div className={styles.tecnologiasCategorias}>
+            <div className={styles.categoriaBloco}>
+              <div className={styles.titleTecnologias}>FrontEnd</div>
+              <div className={styles.cardsLinha}>
+                <CardTecnologias icon={BiLogoReact} title="React" />
+                <CardTecnologias
+                  icon={TbBrandReactNative}
+                  title="React Native"
+                />
+                <CardTecnologias icon={BiLogoJavascript} title="JavaScript" />
+                <CardTecnologias icon={BiLogoTypescript} title="TypeScript" />
+                <CardTecnologias icon={AiFillHtml5} title="HTML" />
+                <CardTecnologias icon={BiLogoCss3} title="CSS" />
+              </div>
+            </div>
+
+            <div className={styles.categoriaBloco}>
+              <div className={styles.titleTecnologias}>BackEnd</div>
+              <div className={styles.cardsLinha}>
+                <CardTecnologias icon={AiOutlineJava} title="Java" />
+                <CardTecnologias icon={BiLogoSpringBoot} title="Spring Boot" />
+                <CardTecnologias icon={BiLogoPhp} title="PHP" />
+                <CardTecnologias icon={DiMysql} title="MySQL" />
+                <CardTecnologias icon={BiLogoPostgresql} title="PostgreSQL" />
+                <CardTecnologias icon={AiOutlinePython} title="Python" />
+                <CardTecnologias icon={BiLogoNodejs} title="NodeJs" />
+              </div>
+            </div>
+
+            <div className={styles.categoriaBloco}>
+              <div className={styles.titleTecnologias}>Ferramentas</div>
+              <div className={styles.cardsLinha}>
+                <CardTecnologias icon={AiFillGithub} title="Git" />
+                <CardTecnologias icon={SiPostman} title="PostMan" />
+                <CardTecnologias icon={BiLogoFigma} title="Figma" />
+                <CardTecnologias icon={DiEclipse} title="Eclipse" />
+                <CardTecnologias icon={BiLogoVisualStudio} title="VS code" />
+                <CardTecnologias icon={SiDbeaver} title="DBeaver" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div className={styles.categoriaBloco}>
-      <div className={styles.titleTecnologias}>BackEnd</div>
-      <div className={styles.cardsLinha}>
-        <CardTecnologias icon={AiOutlineJava} title="Java" />
-        <CardTecnologias icon={BiLogoSpringBoot} title="Spring Boot" />
-        <CardTecnologias icon={BiLogoPhp} title="PHP" />
-        <CardTecnologias icon={DiMysql} title="MySQL" />
-        <CardTecnologias icon={BiLogoPostgresql} title="PostgreSQL" />
-        <CardTecnologias icon={AiOutlinePython} title="Python" />
-        <CardTecnologias icon={BiLogoNodejs} title="NodeJs" />
-
+      <div className={styles.projetos} id="projetos">
+        <div className={styles.separacao}>
+          <div className={styles.linha}></div>
+          <div className={styles.titulo}>Projetos</div>
+          <div className={styles.linha}></div>
+        </div>
+        <div className={styles.projetosContent}>
+          <CardProjetos
+            title="Hospedagem"
+            descricao="Um site feito para manutenção de hospedagem, podendo ser feito reservas com o login de usuário, ou fazer manutenções nos hospedes e quartos com o login de ADM."
+            tags={["React", "Node", "CSS", "java", "JavaScript", "ReactNative"]}
+          />
+          <CardProjetos
+            title="Hospedagem"
+            descricao="Um site feito para manutenção de hospedagem, podendo ser feito reservas com o login de usuário, ou fazer manutenções nos hospedes e quartos com o login de ADM."
+            tags={["React", "Node", "CSS", "java", "JavaScript", "ReactNative"]}
+          />
+        </div>
       </div>
-    </div>
-
-    <div className={styles.categoriaBloco}>
-      <div className={styles.titleTecnologias}>Ferramentas</div>
-      <div className={styles.cardsLinha}>
-        <CardTecnologias icon={AiFillGithub} title="Git" />
-        <CardTecnologias icon={SiPostman} title="PostMan" />
-        <CardTecnologias icon={BiLogoFigma} title="Figma" />
-        <CardTecnologias icon={DiEclipse} title="Eclipse" />
-        <CardTecnologias icon={BiLogoVisualStudio} title="VS code" />
-        <CardTecnologias icon={SiDbeaver} title="DBeaver" />
-
+      <div className={styles.contato} id="contato">
+        <div className={styles.separacao}>
+          <div className={styles.linha}></div>
+          <div className={styles.titulo}>Contato</div>
+          <div className={styles.linha}></div>
+        </div>
+        <div className={styles.contentContato}>
+          <div className={styles.textContato}>Tem alguma duvida ou deseja contratar meus serviços?</div>
+          <div className={styles.formContato}>
+            <div className={styles.formL1}>
+              <input type="text" placeholder="Nome" className={styles.l1}/>
+              <input type="text" placeholder="Email" className={styles.l1}/>
+            </div>
+            <div className={styles.formL2 }>
+              <input type="text" placeholder="Assunto" className={styles.l2}/>
+            </div>
+            <div className={styles.formL3}>
+              <textarea type="text" placeholder="Mensagem" className={styles.l3}></textarea>
+            </div>
+          </div>
+          <div className={styles.botaoContato}>
+            <button className={styles.botaoEnviar}>Enviar</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-      <div className={styles.projetos}></div>
-      <div className={styles.contato}></div>
+      <Footer/>
     </div>
   );
 }

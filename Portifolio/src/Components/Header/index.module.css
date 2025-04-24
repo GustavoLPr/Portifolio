@@ -81,7 +81,6 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 70.19px;
-
 }
 
 .selecionadoBR,
@@ -93,6 +92,7 @@
   width: 100px;
   height: 33px;
   border-radius: 70.19px;
+
 }
 
 .naoSelecionadoBR,
@@ -107,6 +107,7 @@
 
 .br, .us{
   font-size: 26px;
+  
 }
 
 /* .brModeLeft{
@@ -181,6 +182,11 @@
   color: var(--header-text);
 }
 
+.botaoBaixar:active {
+  transform: scale(0.5);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+}
+
 /* Ajustes para telas médias */
 @media (max-width: 992px) {
   .left {
@@ -211,3 +217,4 @@
     font-size: 12px;
   }
 }
+
