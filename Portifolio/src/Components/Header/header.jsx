@@ -37,6 +37,19 @@ export default function Header() {
     }
   };
 
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Curriculo.pdf'; 
+    link.download = 'CurriculoGustavo.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+
+  
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.left}>
@@ -182,7 +195,7 @@ export default function Header() {
           >
             Contato
           </button>
-          <button className={styles.botaoBaixar}>Baixar CV</button>
+          <button className={styles.botaoBaixar} onClick={handleDownload}>Baixar CV</button>
         </div>
       </div>
     </div>

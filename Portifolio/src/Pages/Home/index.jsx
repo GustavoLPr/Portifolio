@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
@@ -28,8 +28,32 @@ import { BiLogoNodejs } from "react-icons/bi";
 import CardFormacao from "../../Components/cardFormacao/cardFormacao";
 import CardTecnologias from "../../Components/cardTecnologias/cardTecnologias";
 import CardProjetos from "../../Components/cardProjetos/cardProjetos";
+import emailjs from '@emailjs/browser';
+
 
 export default function Home() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('gmailService', 'template_vtl9e6l', form.current, {
+        publicKey: 'JWJsK5YBzJhcV4fyP',
+      })
+      .then(
+        () => {
+          alert('Seu Email foi enviado com sucesso');
+        },
+        (error) => {
+          alert('Seu Email não foi enviado, tente outra hora');
+          console.error(error.text);
+        },
+      );
+      e.target.reset();
+  };
+  
   return (
     <div className={styles.container}>
       <Header />
@@ -201,21 +225,21 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
         </div>
         <div className={styles.contentContato}>
           <div className={styles.textContato}>Tem alguma duvida ou deseja contratar meus serviços?</div>
-          <div className={styles.formContato}>
+          <form ref={form} className={styles.formContato} onSubmit={sendEmail}>
             <div className={styles.formL1}>
-              <input type="text" placeholder="Nome" className={styles.l1}/>
-              <input type="text" placeholder="Email" className={styles.l1}/>
+              <input type="text" placeholder="Seu nome" className={styles.l1} name="nome" />
+              <input type="email" placeholder="Seu email" className={styles.l1} name="email"/>
             </div>
             <div className={styles.formL2 }>
-              <input type="text" placeholder="Assunto" className={styles.l2}/>
+              <input type="text" placeholder="Assunto da mensagem" className={styles.l2} name="assunto"/>
             </div>
             <div className={styles.formL3}>
-              <textarea type="text" placeholder="Mensagem" className={styles.l3}></textarea>
+              <textarea type="text" placeholder="Sua mensagem" className={styles.l3} name="mensagem"></textarea>
             </div>
-          </div>
           <div className={styles.botaoContato}>
-            <button className={styles.botaoEnviar}>Enviar</button>
+            <button className={styles.botaoEnviar} onSubmit={sendEmail}>Enviar</button>
           </div>
+          </form>
         </div>
       </div>
       <Footer/>
