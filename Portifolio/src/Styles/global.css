@@ -19,8 +19,10 @@ html {
   --bg-color: #E3E6E6;
   --text-color: #030000;
   --accent-color: #a1c55a;
-  --cardBg-color: #595F66;
-  --cardText-color: #9FA8A2;
+  --cardBg-color: #f5f5f5;   
+  --cardText-color: #2e2e2e; 
+  
+  
 }
 
 body {

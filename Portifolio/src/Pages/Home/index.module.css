@@ -204,15 +204,25 @@
   }
   /* -------------------------------------- PROJETOS  ---------------------------------------------------------- */
   .projetosContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 95%;
+    height: 100%;
     margin: 55px;
     flex-wrap: wrap;
     gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
- 
+  .projetosContentSlide{
+    width: 1250px;
+  }
+
+ .teste{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
   /* -------------------------------------- CONTATO  ---------------------------------------------------------- */
   .contato{
     display: flex;

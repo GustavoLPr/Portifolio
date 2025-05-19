@@ -3,6 +3,8 @@ import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
 import Foto from "../../assets/foto.png";
+import Print from "../../assets/print.png";
+import Print2 from "../../assets/print2.png";
 import { PiHandWaving } from "react-icons/pi";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -28,32 +30,47 @@ import { BiLogoNodejs } from "react-icons/bi";
 import CardFormacao from "../../Components/cardFormacao/cardFormacao";
 import CardTecnologias from "../../Components/cardTecnologias/cardTecnologias";
 import CardProjetos from "../../Components/cardProjetos/cardProjetos";
-import emailjs from '@emailjs/browser';
-
+import emailjs from "@emailjs/browser";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-creative";
+import "swiper/css/navigation";
+import CardProjetosV2 from "../../Components/cardPojetosV2/cardProjetosV2";
+import { Pagination, EffectCreative, Navigation } from "swiper/modules";
 
 export default function Home() {
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const nome = form.current.nome.value.trim();
+    const email = form.current.email.value.trim();
+    const assunto = form.current.assunto.value.trim();
+    const mensagem = form.current.mensagem.value.trim();
+
+    if (!nome || !email || !assunto || !mensagem) {
+      alert("Por favor, preencha todos os campos antes de enviar.");
+      return;
+    }
+
     emailjs
-      .sendForm('gmailService', 'template_vtl9e6l', form.current, {
-        publicKey: 'JWJsK5YBzJhcV4fyP',
+      .sendForm("gmailService", "template_vtl9e6l", form.current, {
+        publicKey: "JWJsK5YBzJhcV4fyP",
       })
       .then(
         () => {
-          alert('Seu Email foi enviado com sucesso');
+          alert("Seu Email foi enviado com sucesso");
         },
         (error) => {
-          alert('Seu Email não foi enviado, tente outra hora');
+          alert("Seu Email não foi enviado, tente outra hora");
           console.error(error.text);
-        },
+        }
       );
-      e.target.reset();
+    e.target.reset();
   };
-  
+
   return (
     <div className={styles.container}>
       <Header />
@@ -73,13 +90,34 @@ export default function Home() {
             <div className={styles.links}>
               <div className={styles.line}></div>
               <span className={styles.linkText}>
-                <button className={styles.link} onClick={() => window.open("https://github.com/GustavoLPr", "_blank")}>
+                <button
+                  className={styles.link}
+                  onClick={() =>
+                    window.open("https://github.com/GustavoLPr", "_blank")
+                  }
+                >
                   <AiFillGithub />
                 </button>
-                <button className={styles.link} onClick={() => window.open("https://www.linkedin.com/in/gustavo-leal-256867297/", "_blank")}>
+                <button
+                  className={styles.link}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/gustavo-leal-256867297/",
+                      "_blank"
+                    )
+                  }
+                >
                   <AiFillLinkedin />
                 </button>
-                <button className={styles.link} onClick={() => window.open("mailto:gustavolealprado.silva@gmail.com", "_blank")}>
+                <button
+                  className={styles.link}
+                  onClick={() =>
+                    window.open(
+                      "mailto:gustavolealprado.silva@gmail.com",
+                      "_blank"
+                    )
+                  }
+                >
                   <AiOutlineMail />{" "}
                 </button>
               </span>
@@ -205,16 +243,116 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
           <div className={styles.linha}></div>
         </div>
         <div className={styles.projetosContent}>
-          <CardProjetos
-            title="Hospedagem"
-            descricao="Um site feito para manutenção de hospedagem, podendo ser feito reservas com o login de usuário, ou fazer manutenções nos hospedes e quartos com o login de ADM."
-            tags={["React", "Node", "CSS", "java", "JavaScript", "ReactNative"]}
-          />
-          <CardProjetos
-            title="Hospedagem"
-            descricao="Um site feito para manutenção de hospedagem, podendo ser feito reservas com o login de usuário, ou fazer manutenções nos hospedes e quartos com o login de ADM."
-            tags={["React", "Node", "CSS", "java", "JavaScript", "ReactNative"]}
-          />
+          <Swiper
+            className={styles.projetosContentSlide}
+            spaceBetween={30}
+            centeredSlides={true} // Centraliza os slides
+            slidesPerView={1}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+            grabCursor={true}
+            pagination={{ dynamicBullets: false }}
+            modules={[Pagination, EffectCreative, Navigation]}
+            effect={"creative"}
+            creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: [0, 0, -400],
+              },
+              next: {
+                translate: ["100%", 0, 0],
+              },
+            }}
+          >
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Sistema de Gerenciamento de Dados"
+                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
+🔐 Autenticação com JWT e controle de sessões
+O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+
+🗃️ Módulo de Cadastro e Consulta Avançada
+Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                tags={[
+                  "React",
+                  "Node",
+                  "CSS",
+                  "java",
+                  "JavaScript",
+                  "ReactNative",
+                ]}
+                imagens1={[Print, Print2, Print]}
+                imagens2={[Print2, Print, Print2]}
+                link={"https://github.com/GustavoLPr"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Sistema de Gerenciamento de Dados"
+                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
+🔐 Autenticação com JWT e controle de sessões
+O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+
+🗃️ Módulo de Cadastro e Consulta Avançada
+Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                tags={[
+                  "React",
+                  "Node",
+                  "CSS",
+                  "java",
+                  "JavaScript",
+                  "ReactNative",
+                ]}
+                imagens1={[Print, Print2, Print]}
+                imagens2={[Print2, Print, Print2]}
+                link={"https://github.com/GustavoLPr"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Sistema de Gerenciamento de Dados"
+                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
+🔐 Autenticação com JWT e controle de sessões
+O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+
+🗃️ Módulo de Cadastro e Consulta Avançada
+Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                tags={[
+                  "React",
+                  "Node",
+                  "CSS",
+                  "java",
+                  "JavaScript",
+                  "ReactNative",
+                ]}
+                imagens1={[Print, Print2, Print]}
+                imagens2={[Print2, Print, Print2]}
+                link={"https://github.com/GustavoLPr"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Sistema de Gerenciamento de Dados"
+                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
+🔐 Autenticação com JWT e controle de sessões
+O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+
+🗃️ Módulo de Cadastro e Consulta Avançada
+Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                tags={[
+                  "React",
+                  "Node",
+                  "CSS",
+                  "java",
+                  "JavaScript",
+                  "ReactNativae",
+                ]}
+                imagens1={[Print, Print2, Print]}
+                imagens2={[Print2, Print, Print2]}
+                link={"https://github.com/GustavoLPr"}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className={styles.contato} id="contato">
@@ -224,25 +362,51 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
           <div className={styles.linha}></div>
         </div>
         <div className={styles.contentContato}>
-          <div className={styles.textContato}>Tem alguma duvida ou deseja contratar meus serviços?</div>
+          <div className={styles.textContato}>
+            Tem alguma duvida ou deseja contratar meus serviços?
+          </div>
           <form ref={form} className={styles.formContato} onSubmit={sendEmail}>
             <div className={styles.formL1}>
-              <input type="text" placeholder="Seu nome" className={styles.l1} name="nome" />
-              <input type="email" placeholder="Seu email" className={styles.l1} name="email"/>
+              <input
+                type="text"
+                placeholder="Seu nome"
+                className={styles.l1}
+                name="nome"
+              />
+              <input
+                type="email"
+                placeholder="Seu email"
+                className={styles.l1}
+                name="email"
+              />
             </div>
-            <div className={styles.formL2 }>
-              <input type="text" placeholder="Assunto da mensagem" className={styles.l2} name="assunto"/>
+            <div className={styles.formL2}>
+              <input
+                type="text"
+                placeholder="Assunto da mensagem"
+                className={styles.l2}
+                name="assunto"
+              />
             </div>
             <div className={styles.formL3}>
-              <textarea type="text" placeholder="Sua mensagem" className={styles.l3} name="mensagem"></textarea>
+              <textarea
+                type="text"
+                placeholder="Sua mensagem"
+                className={styles.l3}
+                name="mensagem"
+              ></textarea>
             </div>
-          <div className={styles.botaoContato}>
-            <button className={styles.botaoEnviar} onSubmit={sendEmail}>Enviar</button>
-          </div>
+            <div className={styles.botaoContato}>
+              <button className={styles.botaoEnviar} onSubmit={sendEmail}>
+                Enviar
+              </button>
+            </div>
           </form>
         </div>
       </div>
-      <Footer/>
+
+      <div className={styles.teste}></div>
+      <Footer />
     </div>
   );
 }
