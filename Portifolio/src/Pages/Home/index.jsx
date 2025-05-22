@@ -1,4 +1,4 @@
-import React, { useRef, useTransition } from "react";
+import {React, useRef, useTransition } from "react";
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
@@ -29,7 +29,7 @@ import { SiPostman } from "react-icons/si";
 import { BiLogoNodejs } from "react-icons/bi";
 import CardFormacao from "../../Components/cardFormacao/cardFormacao";
 import CardTecnologias from "../../Components/cardTecnologias/cardTecnologias";
-import CardProjetos from "../../Components/cardProjetos/cardProjetos";
+// import CardProjetos from "../../Components/cardProjetos/cardProjetos";
 import emailjs from "@emailjs/browser";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

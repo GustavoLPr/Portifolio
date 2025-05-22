@@ -6,35 +6,42 @@
 
 .inicio {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(100vh - 83px);
   margin-top: 83px;
   display: flex;
 }
 
 .esquerdaInicio {
   width: 50%;
-  height: 92vh;
+  /* height: 92vh; */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
   flex-direction: column;
   z-index: 1;
 }
 
 .textEsquerdaInicio {
   height: 50vh;
-  margin-left: 300px;
-  margin-top: 130px;
+  /* margin-left: 300px; */
+  /* margin-left: 14em; */
+  /* margin-top: 130px; */
+  /* margin-top: 17em; */
+  margin: 0;
+  padding: 10em 0 0 13em;
+  text-align: center;
 }
 
 .linha1,
 .linha3 {
-  font-size: 30px;
+  /* font-size: 1.5vw; */
+  font-size: clamp(12px, 1.5vw, 2.5rem);
 }
 
 .linha1 {
-  margin-left: 110px;
+  /* margin-left: 110px; */
+  /* padding-left: 4em; */
 }
 
 .nome {
@@ -42,11 +49,12 @@
 }
 
 .linha2 {
-  font-size: 50px;
+  font-size: clamp(24px, 2.5vw, 5rem);
 }
 
 .linha3 {
-  margin-left: 65px;
+  /* margin-left: 65px; */
+  /* padding-left: 2.4em; */
 }
 
 .links {
@@ -65,9 +73,7 @@
 }
 
 .linkText {
-  color: var(
-    --text-color
-  ); /* ou qualquer cor de texto que você esteja usando */
+  color: var(--text-color);
   white-space: nowrap;
 }
 
@@ -75,7 +81,8 @@
   background-color: transparent;
   color: var(--text-color);
   border: none;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: clamp(12px, 2vw, 2.5rem);
   position: relative;
   z-index: 1;
 }
@@ -93,10 +100,14 @@
 }
 
 .fotoDireitaInicio {
-  width: 400px;
+  /* width: 400px; */
+  /* width: 23vw; */
+  width: clamp(180px, 17vw, 500px);
   /* position: relative; */
-  margin-bottom: 200px;
-  border-radius: 250px;
+  /* margin-bottom: 200px; */
+  /* margin-bottom: 10vw; */
+  margin-bottom: clamp(0px, 13vw, 800px);
+  border-radius: 50%;
   border: 2px solid var(--accent-color);
   position: relative;
   z-index: 1;
@@ -106,18 +117,21 @@
   display: flex;
   flex-direction: column; /* empilha os elementos na vertical */
   align-items: center;
-  margin-left: 300px;
+  /* margin-left: 300px; */
+  margin-left: clamp(220px, 10vw, 250px);
 }
 
 .scrollLine {
-  width: 4px; /* fininha, como linha */
-  height: 150px; /* altura da linha */
+  width: 4px; /* finura da linha */
+  /* height: 150px; altura da linha */
+  height: clamp(4vw, 7vw, 400px);
   background-color: var(--accent-color); /* mesma cor usada nas outras linhas */
 }
 
 .scroll {
   margin-bottom: 10px;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 1.7vw;
 }
 /* -------------------------------------- SOBRE --------------------------- */
 .sobre {
@@ -136,8 +150,6 @@
   background-color: var(--accent-color);
   max-width: 781px;
 } */
-
-
 
 .contentSobre {
   display: flex;
@@ -171,148 +183,148 @@
 }
 /* -------------------------------------- TECNOLOGIAS  ---------------------------------------------------------- */
 
-.tecnologias{
+.tecnologias {
 }
 
-.tecnologiasContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.tecnologiasContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .tecnologiasCategorias {
-    width: 100%;
-    margin-top: 50px;
-  }
-  
-  .categoriaBloco {
-    margin-bottom: 80px; /* espaço entre FrontEnd, BackEnd e Ferramentas */
-  }
-  
-  .titleTecnologias {
-    font-size: 38.29px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .cardsLinha {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* centraliza horizontalmente */
-  }
-  /* -------------------------------------- PROJETOS  ---------------------------------------------------------- */
-  .projetosContent{
-    width: 95%;
-    height: 100%;
-    margin: 55px;
-    flex-wrap: wrap;
-    gap: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  width: 100%;
+  margin-top: 50px;
+}
 
-  .projetosContentSlide{
-    width: 1250px;
-  }
+.categoriaBloco {
+  margin-bottom: 80px; /* espaço entre FrontEnd, BackEnd e Ferramentas */
+}
 
- .teste{
+.titleTecnologias {
+  font-size: 38.29px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cardsLinha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centraliza horizontalmente */
+}
+/* -------------------------------------- PROJETOS  ---------------------------------------------------------- */
+.projetosContent {
+  width: 95%;
+  height: 100%;
+  margin: 55px;
+  flex-wrap: wrap;
+  gap: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
- }
-  /* -------------------------------------- CONTATO  ---------------------------------------------------------- */
-  .contato{
-    display: flex;
-    flex-direction: column;
-  }
+}
 
-  .contentContato{
-    display: flex;
-    width: 60%;
-    align-self: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-    margin-top: 30px;
-  }
+.projetosContentSlide {
+  width: 1250px;
+}
 
-  .textContato{
-    font-size: 30px;
-    color: var(--cardText-color);
-  }
+.teste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* -------------------------------------- CONTATO  ---------------------------------------------------------- */
+.contato {
+  display: flex;
+  flex-direction: column;
+}
 
-  .formL1{
-    display: flex;
-    justify-content: space-between;
-  }
+.contentContato {
+  display: flex;
+  width: 60%;
+  align-self: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+}
 
-  .l1, .l2, .l3{
-    background-color: var(--cardBg-color);
-    border: solid 1px var(--accent-color);
-    opacity: 80%;
-    color: var(--text-color);
-    font-size: 20px;
-    padding: 0px 15px;
-    margin: 25px;
-    font-family: "JetBrains Mono", monospace;
+.textContato {
+  font-size: 30px;
+  color: var(--cardText-color);
+}
 
-  }
+.formL1 {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .l1{
-    width: 45%;
-    height: 54.16px;
+.l1,
+.l2,
+.l3 {
+  background-color: var(--cardBg-color);
+  border: solid 1px var(--accent-color);
+  opacity: 80%;
+  color: var(--text-color);
+  font-size: 20px;
+  padding: 0px 15px;
+  margin: 25px;
+  font-family: "JetBrains Mono", monospace;
+}
 
-  }
+.l1 {
+  width: 45%;
+  height: 54.16px;
+}
 
-  .formL2{
-    display: flex;
-  }
+.formL2 {
+  display: flex;
+}
 
-  .l2{
-    width: 100%;
-    height: 54.16px;
-  }
+.l2 {
+  width: 100%;
+  height: 54.16px;
+}
 
-  .formL3{
-    display: flex;
-  }
+.formL3 {
+  display: flex;
+}
 
-  .l3{
-    width: 100%;
-    height: 153.67px;
-    padding-top: 10px;
-  }
+.l3 {
+  width: 100%;
+  height: 153.67px;
+  padding-top: 10px;
+}
 
-.botaoContato{
+.botaoContato {
   display: flex;
   justify-content: end;
 }
 
-  .botaoEnviar{
-    width: 168.56px;
-    height: 53.48px;
-    border-radius: 33.85px;
-    border: none;
-    font-size: 27.08px;
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    font-family: "JetBrains Mono", monospace;
-    margin-right: 20px; 
-    margin-bottom: 50px;
-  }
+.botaoEnviar {
+  width: 168.56px;
+  height: 53.48px;
+  border-radius: 33.85px;
+  border: none;
+  font-size: 27.08px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-family: "JetBrains Mono", monospace;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
 
-  .botaoEnviar:hover{
-    background-color: var(--bg-color);
-    color: var(--accent-color);
-    border: solid 1px var(--accent-color);
-  }
+.botaoEnviar:hover {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: solid 1px var(--accent-color);
+}
 
-  .botaoEnviar:active{
-    transform: scale(0.9);
-  }
+.botaoEnviar:active {
+  transform: scale(0.9);
+}
 /* -------------------------------------- GERAL  ---------------------------------------------------------- */
 .linha {
   flex-grow: 1;
