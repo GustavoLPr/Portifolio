@@ -33,7 +33,7 @@
 
 .status {
   position: absolute;
-  bottom: 10px;
+  bottom: 2px;
   right: 16px;
   font-size: 10px;
   color: var(--accent-color);

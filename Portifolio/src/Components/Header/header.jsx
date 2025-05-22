@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState, useTransition } from "react";
 import * as styles from "./index.module.css";
 import Logo from "../../assets/logoPretoCortado.png";
 import LogoClara from "../../assets/logoBrancoCortado.png";
@@ -7,11 +7,12 @@ import { MdLightMode } from "react-icons/md";
 import { GiBrazilFlag } from "react-icons/gi";
 import { LiaFlagUsaSolid } from "react-icons/lia";
 import { useTheme } from "../../context/themeContext";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  //////////////////////////////////DARKMODE////////////////////////////////////////////////////
   // const [darkMode, setDarkMode] = useState("darkMode");
   const { darkMode, toggleTheme } = useTheme();
-  const [languageMode, setLanguageMode] = useState("BR");
 
   // const mudarParaLightMode = () => {
   //   if (darkMode === "darkMode") {
@@ -25,30 +26,67 @@ export default function Header() {
   //   }
   // };
 
+  //////////////////////////////////////LINGUAGEM//////////////////////////////////////////////////////
+
+  // const { i18n, t } = useTranslation();
+  // const [languageSelected, setLanguageSelected] = useState(i18n.language);
+
+  // const handleChangeLanguage = useCallback((language) => {
+  //   i18n.changeLanguage(language);
+  //   setLanguageSelected(language);
+  // }, []);
+
+  // const [languageMode, setLanguageMode] = useState("BR");
+
+  // const mudarParaBR = () => {
+  //   if (languageMode === "US") {
+  //     setLanguageMode("BR");
+  //   }
+  // };
+
+  // const mudarParaUS = () => {
+  //   if (languageMode === "BR") {
+  //     setLanguageMode("US");
+  //   }
+  // };
+
+  const { i18n, t } = useTranslation();
+  const [languageMode, setLanguageMode] = useState(i18n.language); // pt-BR ou en-US
+
+  // Atualiza linguagem do i18n ao trocar o modo
+  const handleChangeLanguage = useCallback((language) => {
+    i18n.changeLanguage(language);
+    setLanguageMode(language);
+  }, [i18n]);
+
+  // Garante que o estado inicial bate com o i18n
+  useEffect(() => {
+    setLanguageMode(i18n.language);
+  }, [i18n.language]);
+
   const mudarParaBR = () => {
-    if (languageMode === "US") {
-      setLanguageMode("BR");
+    if (languageMode !== 'pt-BR') {
+      handleChangeLanguage('pt-BR');
     }
   };
 
   const mudarParaUS = () => {
-    if (languageMode === "BR") {
-      setLanguageMode("US");
+    if (languageMode !== 'en-US') {
+      handleChangeLanguage('en-US');
     }
   };
 
-
+  ////////////////////////////////CURRUCULO/////////////////////////////////////////
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Curriculo.pdf'; 
-    link.download = 'CurriculoGustavo.pdf'; 
+    const link = document.createElement("a");
+    link.href = "/Curriculo.pdf";
+    link.download = "CurriculoGustavo.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
-  
 
-  
+
 
   return (
     <div className={styles.headerContainer}>
@@ -81,7 +119,7 @@ export default function Header() {
           )}
         </button>
         <div className={styles.languageChoice}>
-          <button
+          {/* <button
             // className={styles.contratante}
             onClick={mudarParaBR}
             className={
@@ -102,7 +140,27 @@ export default function Header() {
             }
           >
             <LiaFlagUsaSolid className={styles.us} />
-          </button>
+          </button> */}
+          <button
+        onClick={mudarParaBR}
+        className={
+          languageMode === 'pt-BR'
+            ? styles.selecionadoBR
+            : styles.naoSelecionadoBR
+        }
+      >
+        <GiBrazilFlag className={styles.br} />
+      </button>
+      <button
+        onClick={mudarParaUS}
+        className={
+          languageMode === 'en-US'
+            ? styles.selecionadoUS
+            : styles.naoSelecionadoUS
+        }
+      >
+        <LiaFlagUsaSolid className={styles.us} />
+      </button>
         </div>
 
         {/* <button
@@ -133,7 +191,7 @@ export default function Header() {
               }
             }}
           >
-            Inicio
+            {t('Inicio')}
           </button>
           <button
             className={styles.botaoSobre}
@@ -148,7 +206,7 @@ export default function Header() {
               }
             }}
           >
-            Sobre
+            {t('Sobre')}
           </button>
           <button
             className={styles.botaoTecnologias}
@@ -163,7 +221,7 @@ export default function Header() {
               }
             }}
           >
-            Tecnologias
+            {t('Tecnologias')} 
           </button>
           <button
             className={styles.botaoProjetos}
@@ -178,7 +236,7 @@ export default function Header() {
               }
             }}
           >
-            Projetos
+            {t('Projetos')}
           </button>
           <button
             className={styles.botaoContato}
@@ -193,9 +251,11 @@ export default function Header() {
               }
             }}
           >
-            Contato
+            {t('Contato')}
           </button>
-          <button className={styles.botaoBaixar} onClick={handleDownload}>Baixar CV</button>
+          <button className={styles.botaoBaixar} onClick={handleDownload}>
+            {t('Baixar CV')}
+          </button>
         </div>
       </div>
     </div>

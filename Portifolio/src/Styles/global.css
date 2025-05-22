@@ -9,24 +9,36 @@ html {
 
 :root {
   --bg-color: #222831;
-  --text-color: #FFF6F6;
+  --text-color: #fff6f6;
   --accent-color: #6b8e23;
-  --cardBg-color: #373A40;
+  --cardBg-color: #373a40;
   --cardText-color: #9fa09f;
 }
 
 .light-theme {
-  --bg-color: #E3E6E6;
+  --bg-color: #e3e6e6;
   --text-color: #030000;
-  --accent-color: #a1c55a;
-  --cardBg-color: #f5f5f5;   
-  --cardText-color: #2e2e2e; 
-  
-  
+  /* --accent-color: #a1c55a; */
+  --accent-color: #8db839;
+  --cardBg-color: #f5f5f5;
+  --cardText-color: #2e2e2e;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   /* transition: all 0.3s ease; */
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color); 
+  border-radius: 5px;
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useTransition } from "react";
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
@@ -38,8 +38,11 @@ import "swiper/css/effect-creative";
 import "swiper/css/navigation";
 import CardProjetosV2 from "../../Components/cardPojetosV2/cardProjetosV2";
 import { Pagination, EffectCreative, Navigation } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -51,7 +54,7 @@ export default function Home() {
     const mensagem = form.current.mensagem.value.trim();
 
     if (!nome || !email || !assunto || !mensagem) {
-      alert("Por favor, preencha todos os campos antes de enviar.");
+      alert(t("Por favor, preencha todos os campos antes de enviar."));
       return;
     }
 
@@ -61,10 +64,10 @@ export default function Home() {
       })
       .then(
         () => {
-          alert("Seu Email foi enviado com sucesso");
+          alert(t("Seu Email foi enviado com sucesso!"));
         },
         (error) => {
-          alert("Seu Email não foi enviado, tente outra hora");
+          alert(t("Seu Email não foi enviado, tente outra hora"));
           console.error(error.text);
         }
       );
@@ -78,14 +81,17 @@ export default function Home() {
         <div className={styles.esquerdaInicio}>
           <div className={styles.textEsquerdaInicio}>
             <span className={styles.linha1}>
-              Olá, visitante! <PiHandWaving />{" "}
+              {t("Olá, visitante!")} <PiHandWaving />{" "}
             </span>{" "}
             <br />{" "}
             <span className={styles.linha2}>
-              Meu nome é <span className={styles.nome}>Gustavo</span>
+              {t("Meu nome é")} <span className={styles.nome}>Gustavo</span>
             </span>{" "}
             <br />{" "}
-            <span className={styles.linha3}> Desenvolvedor FullStack</span>{" "}
+            <span className={styles.linha3}>
+              {" "}
+              {t("Desenvolvedor FullStack")}
+            </span>{" "}
             <br />
             <div className={styles.links}>
               <div className={styles.line}></div>
@@ -140,48 +146,50 @@ export default function Home() {
       <div className={styles.sobre} id="sobre">
         <div className={styles.separacao}>
           <div className={styles.linha}></div>
-          <div className={styles.titulo}>Sobre</div>
+          <div className={styles.titulo}>{t("Sobre")}</div>
           <div className={styles.linha}></div>
         </div>
         <div className={styles.contentSobre}>
           <div className={styles.esquerdaSobre}>
             <div className={styles.esquerdaSobreText}>
-              Sou um desenvolvedor FullStack com experiência em FrontEnd e
-              BackEnd, criando aplicações eficientes e escaláveis. Tenho
-              conhecimento em React, TypeScript, React Native, JavaScript, Java,
-              Python, PHP e Node.js, além de experiência com APIs REST, bancos
-              de dados e segurança com Spring Security. Trabalho com boas
-              práticas de código, versionamento com Git e integração de
-              serviços. Busco sempre aprimorar minhas habilidades e entregar
-              soluções inovadoras e de alta qualidade.
+              {t(
+                "Sou um desenvolvedor FullStack com experiência em FrontEnd e BackEnd, criando aplicações eficientes e escaláveis. Tenho conhecimento em React, TypeScript, React Native, JavaScript, Java, Python, PHP e Node.js, além de experiência com APIs REST, bancos de dados e segurança com Spring Security. Trabalho com boas práticas de código, versionamento com Git e integração de serviços. Busco sempre aprimorar minhas habilidades e entregar soluções inovadoras e de alta qualidade."
+              )}
             </div>
           </div>
           <div className={styles.direitaSobre}>
-            <div className={styles.formacoesTitle}>Formações</div>
+            <div className={styles.formacoesTitle}>{t("Formações")}</div>
             <CardFormacao
-              title="Tecnologia da Informação e Comunicação"
+              title={t("Tecnologia da Informação e Comunicação")}
               instituicao="FAETERJ Petrópolis"
-              descricao="A FAETERJ Petrópolis (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro - Unidade Petrópolis) é uma instituição pública de ensino superior.
-Ela oferece cursos tecnológicos gratuitos, com foco na formação de profissionais qualificados para o mercado de trabalho. A FAETERJ Petrópolis é reconhecida por seu ensino de qualidade na área de tecnologia e inovação, especialmente em cursos como Sistemas de Informação e Análise e Desenvolvimento de Sistemas."
-              status="cursando"
+              descricao={t(
+                "A FAETERJ Petrópolis (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro - Unidade Petrópolis) é uma instituição pública de ensino superior. Ela oferece cursos tecnológicos gratuitos, com foco na formação de profissionais qualificados para o mercado de trabalho. A FAETERJ Petrópolis é reconhecida por seu ensino de qualidade na área de tecnologia e inovação, especialmente em cursos como Sistemas de Informação e Análise e Desenvolvimento de Sistemas."
+              )}
+              status={t("cursando")}
             />
             <CardFormacao
-              title="Residência de ensino FullStack"
+              title={t("Residência de ensino FullStack")}
               instituicao="Serratec / Senai"
-              descricao="O curso oferecido pelo Serratec tem foco em Desenvolvimento de Software, abordando linguagens de programação, banco de dados, metodologias ágeis e outras habilidades essenciais para atuar como programador."
-              status="Encerrado"
+              descricao={t(
+                "O curso oferecido pelo Serratec tem foco em Desenvolvimento de Software, abordando linguagens de programação, banco de dados, metodologias ágeis e outras habilidades essenciais para atuar como programador."
+              )}
+              status={t("Completo")}
             />
             <CardFormacao
-              title="Desenvolvimento Web Completo"
+              title={t("Desenvolvimento Web Completo")}
               instituicao="Udemy"
-              descricao="Um curso focado em  HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 e ES14), PHP, Orientação a Objetos, MySQL, PHP com PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress."
-              status="cursando"
+              descricao={t(
+                "Um curso focado em HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 e ES14), PHP, Orientação a Objetos, MySQL, PHP com PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress."
+              )}
+              status={t("cursando")}
             />
             <CardFormacao
               title="Spring Boot 2025 REST API's"
               instituicao="Udemy"
-              descricao="O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT."
-              status="cursando"
+              descricao={t(
+                "O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT."
+              )}
+              status={t("cursando")}
             />
           </div>
         </div>
@@ -189,7 +197,7 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
       <div className={styles.tecnologias} id="tecnologias">
         <div className={styles.separacao}>
           <div className={styles.linha}></div>
-          <div className={styles.titulo}>Tecnologias</div>
+          <div className={styles.titulo}>{t("Tecnologias")}</div>
           <div className={styles.linha}></div>
         </div>
         <div className={styles.tecnologiasContent}>
@@ -223,7 +231,7 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
             </div>
 
             <div className={styles.categoriaBloco}>
-              <div className={styles.titleTecnologias}>Ferramentas</div>
+              <div className={styles.titleTecnologias}>{t("Ferramentas")}</div>
               <div className={styles.cardsLinha}>
                 <CardTecnologias icon={AiFillGithub} title="Git" />
                 <CardTecnologias icon={SiPostman} title="PostMan" />
@@ -239,7 +247,7 @@ Ela oferece cursos tecnológicos gratuitos, com foco na formação de profission
       <div className={styles.projetos} id="projetos">
         <div className={styles.separacao}>
           <div className={styles.linha}></div>
-          <div className={styles.titulo}>Projetos</div>
+          <div className={styles.titulo}>{t("Projetos")}</div>
           <div className={styles.linha}></div>
         </div>
         <div className={styles.projetosContent}>
@@ -358,24 +366,24 @@ Permite o cadastro, atualização e exclusão de registros com validação em te
       <div className={styles.contato} id="contato">
         <div className={styles.separacao}>
           <div className={styles.linha}></div>
-          <div className={styles.titulo}>Contato</div>
+          <div className={styles.titulo}>{t("Contato")}</div>
           <div className={styles.linha}></div>
         </div>
         <div className={styles.contentContato}>
           <div className={styles.textContato}>
-            Tem alguma duvida ou deseja contratar meus serviços?
+            {t("Tem alguma duvida ou deseja contratar meus serviços?")}
           </div>
           <form ref={form} className={styles.formContato} onSubmit={sendEmail}>
             <div className={styles.formL1}>
               <input
                 type="text"
-                placeholder="Seu nome"
+                placeholder={t("Seu nome")}
                 className={styles.l1}
                 name="nome"
               />
               <input
                 type="email"
-                placeholder="Seu email"
+                placeholder={t("Seu email")}
                 className={styles.l1}
                 name="email"
               />
@@ -383,7 +391,7 @@ Permite o cadastro, atualização e exclusão de registros com validação em te
             <div className={styles.formL2}>
               <input
                 type="text"
-                placeholder="Assunto da mensagem"
+                placeholder={t("Assunto da mensagem")}
                 className={styles.l2}
                 name="assunto"
               />
@@ -391,21 +399,19 @@ Permite o cadastro, atualização e exclusão de registros com validação em te
             <div className={styles.formL3}>
               <textarea
                 type="text"
-                placeholder="Sua mensagem"
+                placeholder={t("Sua mensagem")}
                 className={styles.l3}
                 name="mensagem"
               ></textarea>
             </div>
             <div className={styles.botaoContato}>
               <button className={styles.botaoEnviar} onSubmit={sendEmail}>
-                Enviar
+                {t("Enviar")}
               </button>
             </div>
           </form>
         </div>
       </div>
-
-      <div className={styles.teste}></div>
       <Footer />
     </div>
   );
