@@ -134,24 +134,24 @@
   font-size: 1.7vw;
 }
 /* -------------------------------------- SOBRE --------------------------- */
-.sobre {
-}
+/* .sobre {
+} */
 
 /* .sobreTitulo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;                            //nao tava sendo usado
   gap: 30px;
 } */
 
 /* .linha {
   flex-grow: 1;
   height: 4px;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color);                   //nao tava sendo usado
   max-width: 781px;
 } */
 
-.contentSobre {
+/* .contentSobre {
   display: flex;
 }
 
@@ -166,21 +166,58 @@
 .esquerdaSobreText {
   font-size: 30px;
   color: var(--cardText-color);
-}
+} */
 
-.direitaSobre {
+/* .direitaSobre {
   width: 50%;
   height: 100vh;
-  display: flex;
-  flex-direction: column; /* organiza verticalmente */
-  align-items: center; /* centraliza horizontalmente */
-  gap: 20px; /* espaço entre "Formações" e o card */
-}
+  display: flex; */
+/* flex-direction: column; organiza verticalmente */
+/* align-items: center; centraliza horizontalmente */
+/* gap: 20px; espaço entre "Formações" e o card */
+/* } */
 
-.formacoesTitle {
+/* .formacoesTitle {
   font-size: 30px;
   color: var(--cardText-color);
+} */
+
+.sobre {
+  /* padding: 0px 500px 0px 500px; */
+  padding-top: 5vw;
 }
+
+.contentSobre {
+  margin: 0 11vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.textArea{
+  margin: 1vw 0 3vw 0;
+  font-size: 1.2vw;
+  color: var(--cardText-color);
+}
+
+.cardArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 3vw;
+  margin-bottom: 7vw;
+}
+
+@media (max-width: 1300px) {
+  .cardArea{
+    flex-direction: column;
+  }
+}
+
+
 /* -------------------------------------- TECNOLOGIAS  ---------------------------------------------------------- */
 
 .tecnologias {
@@ -196,6 +233,7 @@
 .tecnologiasCategorias {
   width: 100%;
   margin-top: 50px;
+  margin-bottom: 7vw;
 }
 
 .categoriaBloco {
@@ -228,13 +266,14 @@
 
 .projetosContentSlide {
   width: 1250px;
+  margin-bottom: 7vw;
 }
 
-.teste {
+/* .teste {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 /* -------------------------------------- CONTATO  ---------------------------------------------------------- */
 .contato {
   display: flex;
@@ -330,11 +369,13 @@
   flex-grow: 1;
   height: 4px;
   background-color: var(--accent-color);
-  max-width: 700px;
+  /* max-width: 700px; */
+  max-width: 12vw;
 }
 
 .titulo {
-  font-size: 45px;
+  /* font-size: 45px; */
+  font-size: 2.5vw;
 }
 
 .separacao {

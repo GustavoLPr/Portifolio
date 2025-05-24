@@ -1,6 +1,7 @@
 .headerContainer {
   width: 100%;
-  min-height: 83px;
+  /* min-height: 77px; */
+  min-height: 4.3vw;
   /* background-color: #222831; */
   /* border-bottom: 2px solid #6b8e23; */
   background-color: var(--bg-color);
@@ -29,7 +30,7 @@
 }
 
 .logo {
-  width: clamp(150px, 18vw, 204px); /* Tamanho responsivo */
+  width: clamp(100px, 13vw, 204px); /* Tamanho responsivo */
   height: auto;
 }
 
@@ -152,7 +153,7 @@
   /* color: #fff6f6; */
   color: var(--header-text);
   /* font-size: 1.1vw; */
-   font-size: clamp(14px, 1.1vw, 20px);
+   font-size: 1vw;
   font-family: "JetBrains Mono", monospace;
 }
 
@@ -162,9 +163,9 @@
   color: var(--accent-color);
   font-family: "JetBrains Mono", monospace;
 
-  font-size: clamp(14px, 1.1vw, 20px);        /* Texto que cresce, mas com limite */
-  width: clamp(120px, 12vw, 200px);           /* Largura adaptativa */
-  height: clamp(38px, 5.2vh, 60px);           /* Altura adaptativa */
+  font-size: clamp(10px, 1vw, 20px);        /* Texto que cresce, mas com limite */
+  width: clamp(100px, 12vw, 200px);           /* Largura adaptativa */
+  height: clamp(32px, 5.2vh, 60px);           /* Altura adaptativa */
   
   border-radius: 26.58px; /* Pode deixar fixo ou também adaptar com clamp se quiser */
 }
@@ -187,6 +188,12 @@
   transform: scale(0.5);
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
 }
+
+/* @media (max-width: 1070px) {
+  .botaoBaixar{
+    font-size: 10px;
+  }
+} */
 
 /* Ajustes para telas médias */
 @media (max-width: 992px) {

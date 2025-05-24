@@ -20,7 +20,7 @@ export default {
         'Desenvolvimento Web Completo' : 'Complete Web Development',
         'Um curso focado em HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 e ES14), PHP, Orientação a Objetos, MySQL, PHP com PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress.' : 'A course focused on HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 and ES14), PHP, Object Orientation, MySQL, PHP with PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress.',
         'O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT.' : 'The course teaches you how to create complete RESTful APIs with Spring Boot 3.4 and Java 21, covering security with JWT, MySQL database, automated testing, Docker, CI/CD, and deployment to AWS and Google Cloud. It also covers best practices, design patterns, and integration with ReactJS and ChatGPT.',
-        'cursando' : 'studying',
+        'Cursando' : 'Studying',
         'Completo' : 'Completed',
         'Ferramentas' : 'Tools',
         'Tem alguma duvida ou deseja contratar meus serviços?' : 'Do you have any questions or would you like to hire my services?',

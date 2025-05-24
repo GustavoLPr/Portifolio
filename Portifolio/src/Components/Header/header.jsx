@@ -185,7 +185,7 @@ export default function Header() {
               if (el) {
                 const offsetTop = el.offsetTop;
                 window.scrollTo({
-                  top: offsetTop - 100, // muda esse valor como quiser
+                  top: offsetTop - 100, 
                   behavior: "smooth",
                 });
               }
@@ -200,7 +200,7 @@ export default function Header() {
               if (el) {
                 const offsetTop = el.offsetTop;
                 window.scrollTo({
-                  top: offsetTop - 100, // muda esse valor como quiser
+                  top: offsetTop - 5, 
                   behavior: "smooth",
                 });
               }
@@ -215,7 +215,7 @@ export default function Header() {
               if (el) {
                 const offsetTop = el.offsetTop;
                 window.scrollTo({
-                  top: offsetTop - 100, // muda esse valor como quiser
+                  top: offsetTop - 100, 
                   behavior: "smooth",
                 });
               }
@@ -230,7 +230,7 @@ export default function Header() {
               if (el) {
                 const offsetTop = el.offsetTop;
                 window.scrollTo({
-                  top: offsetTop - 100, // muda esse valor como quiser
+                  top: offsetTop - 100, 
                   behavior: "smooth",
                 });
               }
@@ -245,7 +245,7 @@ export default function Header() {
               if (el) {
                 const offsetTop = el.offsetTop;
                 window.scrollTo({
-                  top: offsetTop - 100, // muda esse valor como quiser
+                  top: offsetTop - 100, 
                   behavior: "smooth",
                 });
               }

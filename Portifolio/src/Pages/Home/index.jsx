@@ -1,4 +1,4 @@
-import {React, useRef, useTransition } from "react";
+import { React, useRef, useTransition } from "react";
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
@@ -149,7 +149,7 @@ export default function Home() {
           <div className={styles.titulo}>{t("Sobre")}</div>
           <div className={styles.linha}></div>
         </div>
-        <div className={styles.contentSobre}>
+        {/* <div className={styles.contentSobre}>
           <div className={styles.esquerdaSobre}>
             <div className={styles.esquerdaSobreText}>
               {t(
@@ -190,6 +190,48 @@ export default function Home() {
                 "O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT."
               )}
               status={t("cursando")}
+            />
+          </div>
+        </div> */}
+
+        <div className={styles.contentSobre}>
+          <div className={styles.textArea}>
+            {t(
+              "Sou um desenvolvedor FullStack com experiência em FrontEnd e BackEnd, criando aplicações eficientes e escaláveis. Tenho conhecimento em React, TypeScript, React Native, JavaScript, Java, Python, PHP e Node.js, além de experiência com APIs REST, bancos de dados e segurança com Spring Security. Trabalho com boas práticas de código, versionamento com Git e integração de serviços. Busco sempre aprimorar minhas habilidades e entregar soluções inovadoras e de alta qualidade."
+            )}
+          </div>
+          <div className={styles.cardArea}>
+            <CardFormacao
+              title={t("Tecnologia da Informação e Comunicação")}
+              instituicao="FAETERJ Petrópolis"
+              descricao={t(
+                "A FAETERJ Petrópolis (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro - Unidade Petrópolis) é uma instituição pública de ensino superior. Ela oferece cursos tecnológicos gratuitos, com foco na formação de profissionais qualificados para o mercado de trabalho. A FAETERJ Petrópolis é reconhecida por seu ensino de qualidade na área de tecnologia e inovação, especialmente em cursos como Sistemas de Informação e Análise e Desenvolvimento de Sistemas."
+              )}
+              status={t("Cursando")}
+            />
+            <CardFormacao
+              title={t("Residência de ensino FullStack")}
+              instituicao="Serratec / Senai"
+              descricao={t(
+                "O curso oferecido pelo Serratec tem foco em Desenvolvimento de Software, abordando linguagens de programação, banco de dados, metodologias ágeis e outras habilidades essenciais para atuar como programador."
+              )}
+              status={t("Completo")}
+            />
+            <CardFormacao
+              title={t("Desenvolvimento Web Completo")}
+              instituicao="Udemy"
+              descricao={t(
+                "Um curso focado em HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 e ES14), PHP, Orientação a Objetos, MySQL, PHP com PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress."
+              )}
+              status={t("Cursando")}
+            />
+            <CardFormacao
+              title="Spring Boot 2025 REST API's"
+              instituicao="Udemy"
+              descricao={t(
+                "O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT."
+              )}
+              status={t("Cursando")}
             />
           </div>
         </div>
