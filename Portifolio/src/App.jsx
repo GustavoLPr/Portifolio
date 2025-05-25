@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import "./styles/global.css";
-import Home from "./Pages/Home";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-creative";
+import "swiper/css/navigation";import Home from "./Pages/Home";
 import "typeface-jetbrains-mono";
 import { ThemeProvider } from "./context/themeContext";
 import ParticlesBackground from "./Components/Particles/ParticlesBackground";

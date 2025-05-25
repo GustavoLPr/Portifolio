@@ -5,7 +5,7 @@
   /* background-color: #222831; */
   /* border-bottom: 2px solid #6b8e23; */
   background-color: var(--bg-color);
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 0.1vw solid var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,26 +19,32 @@
 .left {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 2vw, 30px); /* Espaço responsivo entre itens */
+  /* gap: clamp(10px, 2vw, 30px); */
+  gap: 1.6vw;
   flex: 1;
 }
 
 .nameAreaLeft {
   display: flex;
   align-items: center;
-  min-width: 180px; /* Largura mínima para a área do logo */
+  /* min-width: 180px;  */
+  width: 10vw;
 }
 
 .logo {
-  width: clamp(100px, 13vw, 204px); /* Tamanho responsivo */
+  /* width: clamp(100px, 13vw, 204px); Tamanho responsivo */
+  width: 9vw;
   height: auto;
 }
 
 .darkModeLeft,
 .ligthModeLeft {
-  padding: 0 clamp(8px, 1.5vw, 15px);
-  height: clamp(28px, 4vh, 40px);
-  width: clamp(80px, 10vw, 120px);
+  /* padding: clamp(8px, 1.5vw, 15px); */
+  /* height: clamp(28px, 4vh, 40px); */
+  /* width: clamp(80px, 10vw, 120px); */
+  padding: 0.8vw;
+  height: 1.9vw;
+  width: 6.5vw;
   border-radius: 70.19px;
   display: flex;
   align-items: center;
@@ -62,45 +68,48 @@
   justify-content: right;
 }
 
-.sunIcon, .moonIcon {
+.sunIcon,
+.moonIcon {
   /* font-size: 25px; */
-  font-size: clamp(0.1px, 2.5vw, 1.4rem);
+  /* font-size: clamp(0.1px, 2.5vw, 1.4rem); */
+  font-size: 1.3vw;
   color: var(--text-color);
 }
 
 .languageChoice {
   background-color: var(--cardBg-color);
-  width: clamp(100px, 12vw, 180px); /* Largura adaptável */
-  height: clamp(30px, 4vh, 45px);    /* Altura adaptável */
+  /* width: clamp(100px, 12vw, 180px);  */
+  /* height: clamp(30px, 4vh, 45px);  */
+  width: 10vw;
+  height: 1.9vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 70.19px;
-  border: 1px solid var(--accent-color);
+  border: 0.1vw solid var(--accent-color);
+}
+
+.selecionadoBR,
+.selecionadoUS,
+.naoSelecionadoBR,
+.naoSelecionadoUS {
+  width: 50%;
+  height: 100%;
+  white-space: nowrap;
+  border: none;
+  border-radius: 70.19px;
 }
 
 .selecionadoBR,
 .selecionadoUS {
   background-color: var(--bg-color);
-  border: none;
   color: var(--text-color);
-  width: 50%; /* ocupa metade do container */
-  height: 90%; /* altura relativa ao container */
-  border-radius: 70.19px;
-  font-size: clamp(10px, 1.4vw, 16px); /* Tamanho do texto adaptável */
-  white-space: nowrap;
 }
 
 .naoSelecionadoBR,
 .naoSelecionadoUS {
   background-color: transparent;
-  border: none;
   color: var(--bg-color);
-  width: 50%;
-  height: 90%;
-  border-radius: 70.19px;
-  font-size: clamp(10px, 1.4vw, 16px);
-  white-space: nowrap;
 }
 
 .naoSelecionadoBR:hover,
@@ -110,7 +119,8 @@
 
 .br,
 .us {
-  font-size: clamp(16px, 2vw, 28px); /* Ícone responsivo */
+  /* font-size: clamp(16px, 2vw, 28px);  */
+  font-size: 1.4vw;
 }
 
 /* .brModeLeft{
@@ -153,21 +163,26 @@
   /* color: #fff6f6; */
   color: var(--header-text);
   /* font-size: 1.1vw; */
-   font-size: 1vw;
+  font-size: 1vw;
   font-family: "JetBrains Mono", monospace;
 }
 
 .botaoBaixar {
   background-color: transparent;
-  border: 2px solid var(--accent-color);
+  border: 0.1vw solid var(--accent-color);
   color: var(--accent-color);
   font-family: "JetBrains Mono", monospace;
 
-  font-size: clamp(10px, 1vw, 20px);        /* Texto que cresce, mas com limite */
-  width: clamp(100px, 12vw, 200px);           /* Largura adaptativa */
-  height: clamp(32px, 5.2vh, 60px);           /* Altura adaptativa */
+  /* font-size: clamp(10px, 1vw, 20px); 
+  width: clamp(100px, 12vw, 200px); 
+  height: clamp(32px, 5.2vh, 60px);  */
+  /* border-radius: 26.58px;  */
+
+  width: 12vw;
+  height: 3vw;
+  font-size: 1vw;
+  border-radius: 3vw;
   
-  border-radius: 26.58px; /* Pode deixar fixo ou também adaptar com clamp se quiser */
 }
 
 .botaoInicio:hover,

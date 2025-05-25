@@ -43,3 +43,53 @@ body {
   background: var(--accent-color); 
   border-radius: 5px;
 }
+
+.swiper-pagination{
+  width: 40vw !important;
+  height: 1vw;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 0.5vw !important; 
+  transform: translateX(-50%) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+/* global.css */
+.swiper-pagination-bullet {
+  width: 0.3vw !important;
+  height: 0.3vw !important;
+  background-color: var(--text-color) !important;
+  opacity: 0.5 !important;
+  transition: all 0.7s ease;
+    margin: 0 0 0 0.5vw !important;
+
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: var(--accent-color) !important;
+}
+
+.swiper-slide{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  /* margin: 0 0 0 0 !important; */
+}
+
+.projetosContentSlide .swiper-slide{
+  height: 35vw !important;
+}
+
+.swiper-slide-active{}
+
+.swiper-slide-visible	{}
+
+.swiper-slide-fully-visible	{}
+
+.swiper-slide-prev	{}
+
+.swiper-slide-next	{}
+

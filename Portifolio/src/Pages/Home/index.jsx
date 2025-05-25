@@ -39,6 +39,7 @@ import "swiper/css/navigation";
 import CardProjetosV2 from "../../Components/cardPojetosV2/cardProjetosV2";
 import { Pagination, EffectCreative, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
+import "../../Styles/global.css"
 
 export default function Home() {
   const { t } = useTranslation();
@@ -336,6 +337,51 @@ Permite o cadastro, atualização e exclusão de registros com validação em te
                 link={"https://github.com/GustavoLPr"}
               />
             </SwiperSlide>
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Sistema de Gerenciamento de Dados"
+                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
+🔐 Autenticação com JWT e controle de sessões
+O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+
+🗃️ Módulo de Cadastro e Consulta Avançada
+Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                tags={[
+                  "React",
+                  "Node",
+                  "CSS",
+                  "java",
+                  "JavaScript",
+                  "ReactNative",
+                ]}
+                imagens1={[Print, Print2, Print]}
+                imagens2={[Print2, Print, Print2]}
+                link={"https://github.com/GustavoLPr"}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Sistema de Gerenciamento de Dados"
+                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
+🔐 Autenticação com JWT e controle de sessões
+O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+
+🗃️ Módulo de Cadastro e Consulta Avançada
+Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                tags={[
+                  "React",
+                  "Node",
+                  "CSS",
+                  "java",
+                  "JavaScript",
+                  "ReactNative",
+                ]}
+                imagens1={[Print, Print2, Print]}
+                imagens2={[Print2, Print, Print2]}
+                link={"https://github.com/GustavoLPr"}
+              />
+            </SwiperSlide>
+            
             <SwiperSlide>
               <CardProjetosV2
                 titleCard="Sistema de Gerenciamento de Dados"
