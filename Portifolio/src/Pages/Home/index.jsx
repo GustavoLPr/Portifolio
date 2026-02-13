@@ -3,8 +3,23 @@ import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 import * as styles from "./index.module.css";
 import Foto from "../../assets/foto.png";
-import Print from "../../assets/print.png";
-import Print2 from "../../assets/print2.png";
+import Print3 from "../../assets/print3.png";
+import Print4 from "../../assets/print4.png";
+import Print5 from "../../assets/print5.png";
+import Print6 from "../../assets/print6.png";
+import Estrutura from "../../assets/estrutura.png";
+import Login from "../../assets/login.png";
+import Funcionarios from "../../assets/funcionarios.png";
+import Hospedes from "../../assets/hospedes.png";
+import Hospedagens from "../../assets/hospedagens.png";
+import Historico from "../../assets/historico.png";
+import Quartos from "../../assets/Quartos.png";
+import Tabela from "../../assets/Tabela.png";
+import Fase1 from "../../assets/fase1.png";
+import Fase2 from "../../assets/fase2.png";
+import Fase3 from "../../assets/fase3.png";
+import Diagrama from "../../assets/diagramaDesabafa.png";
+import Prototipo from "../../assets/prototipoDesabafa.png";
 import { PiHandWaving } from "react-icons/pi";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -39,7 +54,7 @@ import "swiper/css/navigation";
 import CardProjetosV2 from "../../Components/cardPojetosV2/cardProjetosV2";
 import { Pagination, EffectCreative, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import "../../Styles/global.css"
+import "../../Styles/global.css";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -70,7 +85,7 @@ export default function Home() {
         (error) => {
           alert(t("Seu Email não foi enviado, tente outra hora"));
           console.error(error.text);
-        }
+        },
       );
     e.target.reset();
   };
@@ -110,7 +125,7 @@ export default function Home() {
                   onClick={() =>
                     window.open(
                       "https://www.linkedin.com/in/gustavo-leal-256867297/",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -121,7 +136,7 @@ export default function Home() {
                   onClick={() =>
                     window.open(
                       "mailto:gustavolealprado.silva@gmail.com",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -198,7 +213,7 @@ export default function Home() {
         <div className={styles.contentSobre}>
           <div className={styles.textArea}>
             {t(
-              "Sou um desenvolvedor FullStack com experiência em FrontEnd e BackEnd, criando aplicações eficientes e escaláveis. Tenho conhecimento em React, TypeScript, React Native, JavaScript, Java, Python, PHP e Node.js, além de experiência com APIs REST, bancos de dados e segurança com Spring Security. Trabalho com boas práticas de código, versionamento com Git e integração de serviços. Busco sempre aprimorar minhas habilidades e entregar soluções inovadoras e de alta qualidade."
+              "Sou um desenvolvedor FullStack com experiência em FrontEnd e BackEnd, criando aplicações eficientes e escaláveis. Tenho conhecimento em React, TypeScript, React Native, JavaScript, Java, Python, PHP e Node.js, além de experiência com APIs REST, bancos de dados e segurança com Spring Security. Trabalho com boas práticas de código, versionamento com Git e integração de serviços. Busco sempre aprimorar minhas habilidades e entregar soluções inovadoras e de alta qualidade.",
             )}
           </div>
           <div className={styles.cardArea}>
@@ -206,7 +221,7 @@ export default function Home() {
               title={t("Tecnologia da Informação e Comunicação")}
               instituicao="FAETERJ Petrópolis"
               descricao={t(
-                "A FAETERJ Petrópolis (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro - Unidade Petrópolis) é uma instituição pública de ensino superior. Ela oferece cursos tecnológicos gratuitos, com foco na formação de profissionais qualificados para o mercado de trabalho. A FAETERJ Petrópolis é reconhecida por seu ensino de qualidade na área de tecnologia e inovação, especialmente em cursos como Sistemas de Informação e Análise e Desenvolvimento de Sistemas."
+                "A FAETERJ Petrópolis (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro - Unidade Petrópolis) é uma instituição pública de ensino superior. Ela oferece cursos tecnológicos gratuitos, com foco na formação de profissionais qualificados para o mercado de trabalho. A FAETERJ Petrópolis é reconhecida por seu ensino de qualidade na área de tecnologia e inovação, especialmente em cursos como Sistemas de Informação e Análise e Desenvolvimento de Sistemas.",
               )}
               status={t("Cursando")}
             />
@@ -214,7 +229,7 @@ export default function Home() {
               title={t("Residência de ensino FullStack")}
               instituicao="Serratec / Senai"
               descricao={t(
-                "O curso oferecido pelo Serratec tem foco em Desenvolvimento de Software, abordando linguagens de programação, banco de dados, metodologias ágeis e outras habilidades essenciais para atuar como programador."
+                "O curso oferecido pelo Serratec tem foco em Desenvolvimento de Software, abordando linguagens de programação, banco de dados, metodologias ágeis e outras habilidades essenciais para atuar como programador.",
               )}
               status={t("Completo")}
             />
@@ -222,7 +237,7 @@ export default function Home() {
               title={t("Desenvolvimento Web Completo")}
               instituicao="Udemy"
               descricao={t(
-                "Um curso focado em HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 e ES14), PHP, Orientação a Objetos, MySQL, PHP com PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress."
+                "Um curso focado em HTML5, CSS3, BootStrap 4, Java Script (ES6, ES7, ES8, ES9, ES10, ES11, ES12, ES13 e ES14), PHP, Orientação a Objetos, MySQL, PHP com PDO, Ajax, JQuery, MVC, APIs, IONIC, WordPress.",
               )}
               status={t("Cursando")}
             />
@@ -230,7 +245,7 @@ export default function Home() {
               title="Spring Boot 2025 REST API's"
               instituicao="Udemy"
               descricao={t(
-                "O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT."
+                "O curso ensina a criar APIs RESTful completas com Spring Boot 3.4 e Java 21, abordando segurança com JWT, banco de dados MySQL, testes automatizados, Docker, CI/CD e implantação em AWS e Google Cloud. Também cobre boas práticas, padrões de projeto e integração com ReactJS e ChatGPT.",
               )}
               status={t("Cursando")}
             />
@@ -317,135 +332,106 @@ export default function Home() {
           >
             <SwiperSlide>
               <CardProjetosV2
-                titleCard="Sistema de Gerenciamento de Dados"
-                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
-🔐 Autenticação com JWT e controle de sessões
-O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+                titleCard={t("Jogo de Plataforma 2D")}
+                descricaoCard="Este projeto é um Jogo de Plataforma 2D, desenvolvido com o objetivo de aplicar conceitos fundamentais de computação gráfica e lógica de desenvolvimento de jogos.
 
-🗃️ Módulo de Cadastro e Consulta Avançada
-Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+                  O jogo permite:
+                  Controlar um personagem em um ambiente bidimensional, com movimentação lateral e salto.
+                  Simular gravidade e física básica, garantindo comportamento realista do personagem.
+                  Detectar colisões entre o personagem e o cenário, como plataformas e chão.
+                  Renderizar elementos gráficos em tempo real utilizando primitivas do OpenGL.
+                  Exibir informações na tela, como estado do jogo e mensagens ao jogador.
+
+                  A aplicação é estruturada em módulos responsáveis por:
+                  Lógica do jogo, incluindo movimentação, física e colisão.
+                  Renderização gráfica, utilizando OpenGL e FreeGLUT.
+                  Tratamento de eventos de teclado e controle do loop principal do jogo.
+                  "
                 tags={[
-                  "React",
-                  "Node",
-                  "CSS",
-                  "java",
-                  "JavaScript",
-                  "ReactNative",
+                  "C++",
+                  "OpenGL",
+                  "FreeGLUT",
+                  "STL",
+                  "Chrono",
+                  "Console/IO",
+                  "Aplicação Gráfica",
                 ]}
-                imagens1={[Print, Print2, Print]}
-                imagens2={[Print2, Print, Print2]}
-                link={"https://github.com/GustavoLPr"}
+                imagens1={[Fase2, Fase3]}
+                imagens2={[Fase1]}
+                link={"https://github.com/GustavoLPr/Jogo-de-Plataforma.git"}
               />
             </SwiperSlide>
             <SwiperSlide>
               <CardProjetosV2
-                titleCard="Sistema de Gerenciamento de Dados"
-                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
-🔐 Autenticação com JWT e controle de sessões
-O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
+                titleCard="Gerenciamento de Hospedem"
+                descricaoCard="Este projeto é um Sistema de Gerenciamento de Hotel/Pousada, desenvolvido para controlar de forma centralizada todas as operações principais do estabelecimento.
+O sistema permite:
+Gerenciar funcionários, com cadastro, edição, listagem e login.
+Gerenciar hóspedes, possibilitando busca por ID, CPF, nome e quarto.
+Gerenciar quartos, com controle de tipo, preço e status (livre/ocupado).
+Controlar hospedagens, incluindo check-in, check-out, edição de dados e vínculo entre hóspede e quarto.
+Manter um histórico (logs) de check-ins e check-outs, permitindo auditoria e rastreabilidade das ações.
 
-🗃️ Módulo de Cadastro e Consulta Avançada
-Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
+A aplicação é dividida em duas partes principais:
+Backend (API REST) responsável pelas regras de negócio e persistência dos dados.
+Frontend Desktop, feito em Python com interface gráfica, que consome a API e permite o uso do sistema de forma simples e intuitiva.
+O projeto segue uma arquitetura organizada, separando responsabilidades em controllers, schemas e telas, facilitando manutenção, testes e futuras expansões."
                 tags={[
-                  "React",
-                  "Node",
-                  "CSS",
-                  "java",
-                  "JavaScript",
-                  "ReactNative",
+                  "FullStack",
+                  "Python",
+                  "Flask",
+                  "Flask-RESTful",
+                  "Marshmallow",
+                  "SQLAlchemy",
+                  "PostgreSQL",
+                  "Venv",
+                  "Tkinter",
                 ]}
-                imagens1={[Print, Print2, Print]}
-                imagens2={[Print2, Print, Print2]}
+                imagens1={[Funcionarios, Quartos, Tabela]}
+                imagens2={[Hospedes, Historico, Hospedagens]}
+                link={"https://github.com/GustavoLPr/Hospedagem.git"}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <CardProjetosV2
+                titleCard="Desabafa"
+                descricaoCard="O que o sistema faz:
+Um site projetado para fazer desabafos anonimos identificados pelo seu local de envio aproximado com a utilização de um mapa mundi interativo(cidade/estado)
+
+Quem usa:
+Qualquer pessoa que queira desabaafar de forma anonima ou ler desabafos na sua região
+
+Quais ações o usuário pode fazer?
+Desabafar de forma anonima
+Ler desabafos em um mapa interativo da região
+Comentar nos desabafos, caso for permitido pelo escritor do post
+"
+                tags={[
+                  "in-development",
+                  "FullStack",
+                  "React",
+                  "CSS",
+                  "HTML",
+                  "java",
+                  "PostgresSQL",
+                  "SpringBoot",
+                  "JavaScript",
+                ]}
+                imagens1={[Diagrama, Prototipo]}
+                imagens2={[]}
                 link={"https://github.com/GustavoLPr"}
               />
             </SwiperSlide>
+
             <SwiperSlide>
               <CardProjetosV2
-                titleCard="Sistema de Gerenciamento de Dados"
-                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
-🔐 Autenticação com JWT e controle de sessões
-O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
-
-🗃️ Módulo de Cadastro e Consulta Avançada
-Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
-                tags={[
-                  "React",
-                  "Node",
-                  "CSS",
-                  "java",
-                  "JavaScript",
-                  "ReactNative",
-                ]}
-                imagens1={[Print, Print2, Print]}
-                imagens2={[Print2, Print, Print2]}
-                link={"https://github.com/GustavoLPr"}
-              />
-            </SwiperSlide>
-            
-            <SwiperSlide>
-              <CardProjetosV2
-                titleCard="Sistema de Gerenciamento de Dados"
-                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
-🔐 Autenticação com JWT e controle de sessões
-O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
-
-🗃️ Módulo de Cadastro e Consulta Avançada
-Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
-                tags={[
-                  "React",
-                  "Node",
-                  "CSS",
-                  "java",
-                  "JavaScript",
-                  "ReactNative",
-                ]}
-                imagens1={[Print, Print2, Print]}
-                imagens2={[Print2, Print, Print2]}
-                link={"https://github.com/GustavoLPr"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CardProjetosV2
-                titleCard="Sistema de Gerenciamento de Dados"
-                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
-🔐 Autenticação com JWT e controle de sessões
-O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
-
-🗃️ Módulo de Cadastro e Consulta Avançada
-Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
-                tags={[
-                  "React",
-                  "Node",
-                  "CSS",
-                  "java",
-                  "JavaScript",
-                  "ReactNative",
-                ]}
-                imagens1={[Print, Print2, Print]}
-                imagens2={[Print2, Print, Print2]}
-                link={"https://github.com/GustavoLPr"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CardProjetosV2
-                titleCard="Sistema de Gerenciamento de Dados"
-                descricaoCard="Aplicação web full-stack desenvolvida para simular um sistema empresarial completo de gerenciamento de dados. Idealizada para empresas que precisam de controle sobre cadastros, atualizações e visualização de informações em tempo real, a plataforma conta com as seguintes funcionalidades:
-🔐 Autenticação com JWT e controle de sessões
-O sistema utiliza JSON Web Tokens (JWT) para autenticação segura, com renovação automática de tokens e proteção de rotas para usuários autenticados.
-
-🗃️ Módulo de Cadastro e Consulta Avançada
-Permite o cadastro, atualização e exclusão de registros com validação em tempo real (via Yup e React Hook Form). O sistema também conta com filtros dinâmicos, paginação e ordenação por colunas, facilitando a busca de dados."
-                tags={[
-                  "React",
-                  "Node",
-                  "CSS",
-                  "java",
-                  "JavaScript",
-                  "ReactNativae",
-                ]}
-                imagens1={[Print, Print2, Print]}
-                imagens2={[Print2, Print, Print2]}
-                link={"https://github.com/GustavoLPr"}
+                titleCard="Portifólio"
+                descricaoCard="Este projeto é um portfólio pessoal desenvolvido em React, criado com o objetivo de apresentar projetos, habilidades e informações profissionais de forma moderna e organizada. A aplicação possui modo escuro, permitindo melhor experiência visual, além de suporte à troca de idioma, tornando o conteúdo acessível a diferentes públicos. O layout foi desenvolvido com foco em responsividade para telas médias e grandes, garantindo boa usabilidade em desktops e notebooks, enquanto a adaptação para dispositivos móveis ainda está em desenvolvimento. O projeto prioriza uma estrutura de componentes reutilizáveis, boa organização de código e atenção à experiência do usuário, servindo tanto como vitrine profissional quanto como base para futuras expansões e melhorias."
+                tags={["in-development", "React", "HTML", "CSS", "JavaScript"]}
+                imagens1={[Print3, Print5]}
+                imagens2={[Print4, Print6]}
+                link={"https://github.com/GustavoLPr/Portifolio.git"}
               />
             </SwiperSlide>
           </Swiper>

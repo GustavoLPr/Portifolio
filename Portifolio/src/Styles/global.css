@@ -4,7 +4,8 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "JetBrains Mono", monospace;
+  /* font-family: "JetBrains Mono", monospace; */
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -76,18 +77,23 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  
   /* margin: 0 0 0 0 !important; */
 }
 
 .projetosContentSlide .swiper-slide{
-  height: 35vw !important;
+  height: 30vw !important;
+  
 }
 
 .swiper-slide-active{}
 
-.swiper-slide-visible	{}
+.swiper-slide-visible	{
+  
+}
 
-.swiper-slide-fully-visible	{}
+.swiper-slide-fully-visible	{
+}
 
 .swiper-slide-prev	{}
 

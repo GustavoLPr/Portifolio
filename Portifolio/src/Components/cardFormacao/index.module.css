@@ -54,3 +54,35 @@
   font-size: clamp(0.4rem, 0.6vw, 2.5rem);
   color: var(--accent-color);
 }
+
+@media (max-width: 500px) {
+  .containerCardFormacao {
+    width: 80vw;
+    height: auto;
+    padding: 10px;
+    box-shadow: 0px 1.5vw var(--accent-color);
+    margin-top: 3vw;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .instituicao {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .descricao {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .status {
+    font-size: 8px;
+    bottom: 3px;
+    right: 6px;
+  }
+}
