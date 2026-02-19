@@ -1,7 +1,8 @@
-import React from 'react'
+import {useState} from 'react'
 import * as styles from "./index.module.css";
 
 export default function CardFormacao({title, instituicao, descricao, status}) {
+
   return (
     <div className={styles.containerCardFormacao}>
         <div className={styles.title}>{title}</div>

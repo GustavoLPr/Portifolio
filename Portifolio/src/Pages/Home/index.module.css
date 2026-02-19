@@ -189,27 +189,33 @@
 
 /* -------------------------------------- SOBRE --------------------------- */
 /* .sobre {
+  width: 80%; */
+  /* margin: 0 auto; centraliza horizontalmente */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 } */
 
 /* .sobreTitulo {
   display: flex;
-  align-items: center;
-  justify-content: center;                            //nao tava sendo usado
-  gap: 30px;
+  align-items: center; */
+  /* justify-content: center;                            //nao tava sendo usado */
+  /* gap: 30px;
 } */
 
-/* .linha {
-  flex-grow: 1;
-  height: 4px;
-  background-color: var(--accent-color);                   //nao tava sendo usado
-  max-width: 781px;
-} */
+/* .linha { */
+  /* flex-grow: 1; */
+  /* height: 4px; */
+  /* background-color: var(--accent-color);                   //nao tava sendo usado */
+  /* max-width: 781px; */
+/* } */
 
 /* .contentSobre {
   display: flex;
-}
+} */
 
-.esquerdaSobre {
+/* .esquerdaSobre {
   width: 50%;
   height: 100vh;
   display: flex;
@@ -218,27 +224,28 @@
 }
 
 .esquerdaSobreText {
-  font-size: 30px;
+  font-size: 1vw;
   color: var(--cardText-color);
-} */
+}
 
-/* .direitaSobre {
+.direitaSobre {
   width: 50%;
   height: 100vh;
-  display: flex; */
-/* flex-direction: column; organiza verticalmente */
-/* align-items: center; centraliza horizontalmente */
-/* gap: 20px; espaço entre "Formações" e o card */
-/* } */
+  display: flex;
+flex-direction: column; 
+align-items: center; 
+gap: 20px; 
+}
 
-/* .formacoesTitle {
+.formacoesTitle {
   font-size: 30px;
   color: var(--cardText-color);
 } */
 
+/* /////////////////novo/////////// */
 .sobre {
-  /* padding: 0px 500px 0px 500px; */
   padding-top: 5vw;
+  background-color: var(--bg-color);
 }
 
 .contentSobre {
@@ -254,7 +261,7 @@
 
 .textArea {
   margin: 1vw 0 3vw 0;
-  font-size: 1.2vw;
+  font-size: 1vw;
   color: var(--cardText-color);
 }
 
@@ -335,7 +342,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space-collapse: preserve-breaks;
+  /* white-space-collapse:; */
 }
 
 .projetosContentSlide {
@@ -439,10 +446,10 @@
   /* height: 53.48px; */
   height: 2.8vw;
   /* border-radius: 33.85px; */
-  border-radius: 1.7vw;
+  /* border-radius: 1.7vw; */
   border: none;
   /* font-size: 27.08px; */
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   background-color: var(--accent-color);
   color: var(--bg-color);
   /* font-family: "JetBrains Mono", monospace; */
@@ -466,7 +473,7 @@
 .linha {
   flex-grow: 1;
   /* height: 4px; */
-  height: 0.2vw;
+  height: 0.01vw;
   background-color: var(--accent-color);
   /* max-width: 700px; */
   max-width: 12vw;

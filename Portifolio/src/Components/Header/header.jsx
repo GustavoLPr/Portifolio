@@ -79,7 +79,7 @@ export default function Header() {
   ////////////////////////////////CURRUCULO/////////////////////////////////////////
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Curriculo.pdf";
+    link.href = "/GustavoDesenvolvedor.pdf";
     link.download = "CurriculoGustavo.pdf";
     document.body.appendChild(link);
     link.click();

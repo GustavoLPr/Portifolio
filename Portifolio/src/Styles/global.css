@@ -29,7 +29,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  /* transition: all 3s ease; */
+  /* transition: all 1s ease; */
 }
 
 ::-webkit-scrollbar {
@@ -64,7 +64,7 @@ body {
   background-color: var(--text-color) !important;
   opacity: 0.5 !important;
   transition: all 0.7s ease;
-    margin: 0 0 0 0.5vw !important;
+  margin: 0 0 0 0.5vw !important;
 
 }
 

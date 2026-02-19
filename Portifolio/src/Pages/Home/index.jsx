@@ -174,7 +174,6 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.direitaSobre}>
-            <div className={styles.formacoesTitle}>{t("Formações")}</div>
             <CardFormacao
               title={t("Tecnologia da Informação e Comunicação")}
               instituicao="FAETERJ Petrópolis"
@@ -210,6 +209,7 @@ export default function Home() {
           </div>
         </div> */}
 
+{/* //////////////////NOVO////////////// */}
         <div className={styles.contentSobre}>
           <div className={styles.textArea}>
             {t(
@@ -333,20 +333,7 @@ export default function Home() {
             <SwiperSlide>
               <CardProjetosV2
                 titleCard={t("Jogo de Plataforma 2D")}
-                descricaoCard="Este projeto é um Jogo de Plataforma 2D, desenvolvido com o objetivo de aplicar conceitos fundamentais de computação gráfica e lógica de desenvolvimento de jogos.
-
-                  O jogo permite:
-                  Controlar um personagem em um ambiente bidimensional, com movimentação lateral e salto.
-                  Simular gravidade e física básica, garantindo comportamento realista do personagem.
-                  Detectar colisões entre o personagem e o cenário, como plataformas e chão.
-                  Renderizar elementos gráficos em tempo real utilizando primitivas do OpenGL.
-                  Exibir informações na tela, como estado do jogo e mensagens ao jogador.
-
-                  A aplicação é estruturada em módulos responsáveis por:
-                  Lógica do jogo, incluindo movimentação, física e colisão.
-                  Renderização gráfica, utilizando OpenGL e FreeGLUT.
-                  Tratamento de eventos de teclado e controle do loop principal do jogo.
-                  "
+                descricaoCard={t("Este projeto é um Jogo de Plataforma 2D desenvolvido com o objetivo de aplicar conceitos fundamentais de computação gráfica e lógica de desenvolvimento de jogos. A aplicação permite controlar um personagem em um ambiente bidimensional, com movimentação lateral e salto, além de simular gravidade e física básica para garantir um comportamento mais realista. O sistema também realiza a detecção de colisões entre o personagem e os elementos do cenário, como plataformas e chão, enquanto renderiza gráficos em tempo real por meio de primitivas do OpenGL e exibe informações na tela, como o estado do jogo e mensagens ao jogador. Sua estrutura é organizada em módulos responsáveis pela lógica do jogo — incluindo movimentação, física e colisão —, pela renderização gráfica utilizando OpenGL e FreeGLUT, e pelo tratamento de eventos de teclado, além do controle do loop principal da aplicação.")}
                 tags={[
                   "C++",
                   "OpenGL",
@@ -363,19 +350,8 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <CardProjetosV2
-                titleCard="Gerenciamento de Hospedem"
-                descricaoCard="Este projeto é um Sistema de Gerenciamento de Hotel/Pousada, desenvolvido para controlar de forma centralizada todas as operações principais do estabelecimento.
-O sistema permite:
-Gerenciar funcionários, com cadastro, edição, listagem e login.
-Gerenciar hóspedes, possibilitando busca por ID, CPF, nome e quarto.
-Gerenciar quartos, com controle de tipo, preço e status (livre/ocupado).
-Controlar hospedagens, incluindo check-in, check-out, edição de dados e vínculo entre hóspede e quarto.
-Manter um histórico (logs) de check-ins e check-outs, permitindo auditoria e rastreabilidade das ações.
-
-A aplicação é dividida em duas partes principais:
-Backend (API REST) responsável pelas regras de negócio e persistência dos dados.
-Frontend Desktop, feito em Python com interface gráfica, que consome a API e permite o uso do sistema de forma simples e intuitiva.
-O projeto segue uma arquitetura organizada, separando responsabilidades em controllers, schemas e telas, facilitando manutenção, testes e futuras expansões."
+                titleCard={t("Gerenciamento de Hospedem")}
+                descricaoCard={t("Este projeto é um Sistema de Gerenciamento de Hotel/Pousada desenvolvido para centralizar e otimizar todas as operações principais do estabelecimento. A aplicação permite o gerenciamento completo de funcionários, incluindo cadastro, edição, listagem e autenticação, além do controle de hóspedes com possibilidade de busca por ID, CPF, nome ou quarto associado. O sistema também realiza a gestão de quartos, administrando tipo, preço e status (livre ou ocupado), bem como o controle das hospedagens, contemplando check-in, check-out, edição de informações e o vínculo entre hóspede e quarto. Além disso, mantém um histórico detalhado de logs de entradas e saídas, garantindo auditoria e rastreabilidade das ações realizadas. A solução é estruturada em duas camadas principais: um Backend em formato de API REST responsável pelas regras de negócio e persistência dos dados, e um Frontend Desktop desenvolvido em Python com interface gráfica, que consome a API e proporciona uma utilização simples e intuitiva. O projeto segue uma arquitetura organizada, com separação clara de responsabilidades entre controllers, schemas e telas, facilitando manutenção, testes e futuras expansões.")}
                 tags={[
                   "FullStack",
                   "Python",
@@ -395,18 +371,8 @@ O projeto segue uma arquitetura organizada, separando responsabilidades em contr
 
             <SwiperSlide>
               <CardProjetosV2
-                titleCard="Desabafa"
-                descricaoCard="O que o sistema faz:
-Um site projetado para fazer desabafos anonimos identificados pelo seu local de envio aproximado com a utilização de um mapa mundi interativo(cidade/estado)
-
-Quem usa:
-Qualquer pessoa que queira desabaafar de forma anonima ou ler desabafos na sua região
-
-Quais ações o usuário pode fazer?
-Desabafar de forma anonima
-Ler desabafos em um mapa interativo da região
-Comentar nos desabafos, caso for permitido pelo escritor do post
-"
+                titleCard={t("Desabafa")}
+                descricaoCard={t("Este projeto é uma plataforma web desenvolvida para permitir que pessoas façam desabafos de forma anônima, identificados apenas por sua localização aproximada (cidade/estado) por meio de um mapa-múndi interativo. O sistema possibilita que qualquer pessoa compartilhe sentimentos, pensamentos ou experiências sem revelar sua identidade, ao mesmo tempo em que permite a leitura de desabafos publicados na própria região ou em outras localidades. A plataforma também oferece a opção de interação por meio de comentários, desde que o autor da publicação permita, promovendo apoio, empatia e troca de experiências entre os usuários de maneira segura e anônima.")}
                 tags={[
                   "in-development",
                   "FullStack",
@@ -426,8 +392,8 @@ Comentar nos desabafos, caso for permitido pelo escritor do post
 
             <SwiperSlide>
               <CardProjetosV2
-                titleCard="Portifólio"
-                descricaoCard="Este projeto é um portfólio pessoal desenvolvido em React, criado com o objetivo de apresentar projetos, habilidades e informações profissionais de forma moderna e organizada. A aplicação possui modo escuro, permitindo melhor experiência visual, além de suporte à troca de idioma, tornando o conteúdo acessível a diferentes públicos. O layout foi desenvolvido com foco em responsividade para telas médias e grandes, garantindo boa usabilidade em desktops e notebooks, enquanto a adaptação para dispositivos móveis ainda está em desenvolvimento. O projeto prioriza uma estrutura de componentes reutilizáveis, boa organização de código e atenção à experiência do usuário, servindo tanto como vitrine profissional quanto como base para futuras expansões e melhorias."
+                titleCard={t("Portifólio")}
+                descricaoCard={t("Este projeto é um portfólio pessoal desenvolvido em React, criado com o objetivo de apresentar projetos, habilidades e informações profissionais de maneira moderna e organizada. A aplicação conta com modo escuro para proporcionar uma melhor experiência visual, além de suporte à troca de idioma, tornando o conteúdo acessível a diferentes públicos. O layout foi construído com foco em responsividade para telas médias e grandes, garantindo boa usabilidade em desktops e notebooks, enquanto a adaptação para dispositivos móveis ainda está em desenvolvimento. O projeto prioriza uma estrutura baseada em componentes reutilizáveis, organização clara de código e atenção à experiência do usuário, servindo tanto como vitrine profissional quanto como base sólida para futuras expansões e melhorias.")}
                 tags={["in-development", "React", "HTML", "CSS", "JavaScript"]}
                 imagens1={[Print3, Print5]}
                 imagens2={[Print4, Print6]}

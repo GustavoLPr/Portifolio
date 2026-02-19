@@ -17,7 +17,7 @@ export default function ParticlesBackground() {
     } else {
       console.error('particlesJS não está definido');
     }
-  }, [darkMode]); // agora ele recarrega sempre que o tema mudar
+  }, [darkMode]); 
   
 
   return (
