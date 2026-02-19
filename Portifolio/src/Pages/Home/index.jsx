@@ -54,7 +54,7 @@ import "swiper/css/navigation";
 import CardProjetosV2 from "../../Components/cardPojetosV2/cardProjetosV2";
 import { Pagination, EffectCreative, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import "../../Styles/global.css";
+// import "../../Styles/global.css";
 
 export default function Home() {
   const { t } = useTranslation();

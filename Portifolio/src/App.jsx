@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import "./styles/global.css";
+// import "./styles/global.css";
+import './Styles/global.css'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
